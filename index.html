@@ -1947,36 +1947,44 @@
   </div>
 
   <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    menuToggle.addEventListener('click', () => {
-      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', !expanded);
-      mobileMenu.classList.toggle('active');
-      
-      // Toggle menu icon
-      const icon = menuToggle.querySelector('i');
-      if (mobileMenu.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-      } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-      }
-    });
+/* Mobile Hero layout fix */
+@media (max-width: 768px) {
+  /* Stack hero-left and hero-right vertically */
+  .hero-inner {
+    display: flex;
+    flex-direction: column; /* top-to-bottom */
+    align-items: center;    /* center content horizontally */
+  }
 
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        const icon = menuToggle.querySelector('i');
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-      });
-    });
+  /* Ensure profile image section comes first */
+  .hero-left {
+    order: 0;
+    width: 100%;            /* full width */
+    text-align: center;     /* center text and buttons */
+    margin-bottom: 20px;    /* space below image */
+  }
+
+  .hero-left .profile-wrap img {
+    width: 150px;           /* adjust size */
+    height: 150px;
+    border-radius: 50%;     /* make it circular */
+    object-fit: cover;
+  }
+
+  /* Summary section below the image */
+  .hero-right {
+    order: 1;
+    width: 100%;
+    text-align: center;     /* center summary content */
+  }
+
+  /* Center buttons and name */
+  .hero-left .hero-name h1,
+  .hero-left .role,
+  .hero-cta {
+    text-align: center;
+  }
+}
 
     // Thesis abstract toggle
     const toggleThesis = document.getElementById('toggleThesis');
@@ -2074,5 +2082,6 @@
   </script>
 </body>
 </html>
+
 
 
