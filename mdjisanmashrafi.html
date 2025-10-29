@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Md. Jisan Mashrafi — AI/ML Researcher</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary: #6C63FF;
+      --primary-dark: #5A52D5;
+      --secondary: #FF6584;
+      --accent: #36D1DC;
+      --muted: #6B7280;
+      --dark: #1F2937;
+      --darker: #111827;
+      --light: #F3F4F6;
+      --bg: #FFFFFF;
+      --card: #FFFFFF;
+      --border: #E5E7EB;
+      --radius: 16px;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.1);
+      --maxw: 1200px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #374151;
+      background: var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #111827;
+    }
+
+    a{color:var(--primary);text-decoration:none; transition: var(--transition);}
+    a:hover{color:var(--primary-dark);}
+    img{max-width:100%;display:block}
+
+    /* --- NAV --- */
+    .nav {
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:1200;
+      padding:16px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.7);
+      transition: var(--transition);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    .nav.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    .nav-inner{
+      width:100%;
+      max-width:var(--maxw);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand{
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight:800;
+      color:var(--primary);
+      font-size:1.25rem;
+      letter-spacing: -0.5px;
+    }
+    .nav-links{display:flex;gap:24px;align-items:center}
+    .nav-links a{
+      font-weight:600;
+      color:#4B5563;
+      font-size:0.92rem;
+      position: relative;
+      padding: 8px 0;
+    }
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: var(--transition);
+    }
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+    .nav-links a:hover{color:var(--primary)}
+    .menu-toggle{
+      display:none;
+      background:none;
+      border:0;
+      font-size:1.25rem;
+      color: #4B5563;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .menu-toggle:hover {
+      color: var(--primary);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      padding: 20px;
+      gap: 16px;
+      z-index: 1100;
+    }
+    .mobile-menu.active {
+      display: flex;
+    }
+    .mobile-menu a {
+      font-weight: 600;
+      color: #4B5563;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+      transition: var(--transition);
+    }
+    .mobile-menu a:hover {
+      color: var(--primary);
+      transform: translateX(5px);
+    }
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    /* --- HERO (compact & denser) --- */
+    .hero {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:120px 20px 60px;
+      position:relative;
+      overflow:visible;
+      max-width:100%;
+      background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
+    }
+    .hero-inner{
+      width:100%;
+      max-width:var(--maxw);
+      background: var(--card);
+      border-radius:24px;
+      box-shadow: var(--shadow-lg);
+      display:grid;
+      grid-template-columns: 420px 1fr;
+      gap:2rem;
+      align-items:center;
+      padding:40px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .hero-inner:before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(108, 99, 255, 0.05) 0%, rgba(108, 99, 255, 0) 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    /* Left hero panel (image + name) */
+    .hero-left{
+      position:relative;
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      align-items:center;
+      justify-content:center;
+      z-index: 1;
+    }
+
+    .profile-wrap{
+      width:240px;
+      height:240px;
+      border-radius:50%;
+      overflow:hidden;
+      border: 6px solid rgba(108, 99, 255, 0.1);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      transform: translateY(-28px);
+      background: linear-gradient(135deg, #F3F4F6, #E5E7EB);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition: var(--transition);
+    }
+    .profile-wrap:hover {
+      transform: translateY(-28px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    .profile-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .hero-name{
+      text-align:center;
+      margin-top:-10px;
+      line-height:1.05;
+    }
+    .hero-name h1{
+      font-size:1.75rem;
+      font-weight:800;
+      letter-spacing:-0.02em;
+      margin-bottom:8px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-name .role{
+      color:var(--muted);
+      font-weight:600;
+      font-size:1rem;
+      position: relative;
+      display: inline-block;
+    }
+    .hero-name .role:after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+    .hero-name:hover .role:after {
+      transform: scaleX(1);
+    }
+
+    .hero-cta{
+      display:flex;
+      gap:12px;
+      margin-top:10px;
+    }
+    .btn{
+      padding:12px 20px;
+      border-radius:12px;
+      font-weight:700;
+      border:0;
+      cursor:pointer;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      transition: var(--transition);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: var(--transition);
+    }
+    .btn:hover:before {
+      left: 100%;
+    }
+    .btn-primary{
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color:white;
+      box-shadow: 0 8px 20px rgba(108, 99, 255, 0.2);
+    }
+    .btn-primary:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(108, 99, 255, 0.3);
+    }
+    .btn-outline{
+      background:transparent;
+      border: 2px solid var(--border);
+      color:var(--muted);
+      position: relative;
+      z-index: 1;
+    }
+    .btn-outline:hover{
+      background:var(--light);
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(108, 99, 255, 0.1);
+    }
+    
+    /* Enhanced Download CV button */
+    .btn-cv {
+      background: linear-gradient(135deg, var(--secondary), #FF4D6D);
+      color: white;
+      box-shadow: 0 8px 20px rgba(255, 101, 132, 0.2);
+      font-weight: 700;
+      padding: 12px 22px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+    .btn-cv:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(255, 101, 132, 0.3);
+      background: linear-gradient(135deg, #FF4D6D, #FF3366);
+    }
+
+    /* Right hero panel (compact about summary) */
+    .hero-right{
+      padding:20px 24px;
+      position:relative;
+      z-index: 1;
+    }
+
+    /* diagonal/curved divider visual */
+    .hero-right::before{
+      content:'';
+      position:absolute;
+      left:-40px;
+      top:0;
+      bottom:0;
+      width:40px;
+      background: linear-gradient(180deg, rgba(108, 99, 255, 0.05), rgba(54, 209, 220, 0.04));
+      clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
+      border-top-left-radius:12px;
+      border-bottom-left-radius:12px;
+      pointer-events:none;
+      opacity:0.95;
+    }
+
+    .hero-summary h3{
+      font-size:1.25rem;
+      margin-bottom:12px;
+      color: #111827;
+    }
+    .hero-summary p{
+      color:var(--muted);
+      margin-bottom:16px;
+      font-size: 1.05rem;
+    }
+    .hero-meta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      font-size:0.92rem;
+      color:var(--muted);
+    }
+
+    .stat-pill{
+      background: rgba(108, 99, 255, 0.08);
+      padding:10px 14px;
+      border-radius:12px;
+      font-weight:700;
+      min-width:100px;
+      text-align:center;
+      transition: var(--transition);
+      border: 1px solid rgba(108, 99, 255, 0.1);
+      color: var(--primary);
+    }
+    .stat-pill:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(108, 99, 255, 0.1);
+      background: rgba(108, 99, 255, 0.12);
+    }
+
+    /* --- MAIN SECTIONS --- */
+    .section{
+      padding:60px 20px;
+      position: relative;
+      scroll-margin-top: 80px; /* Account for fixed navbar */
+    }
+    .section:nth-child(even) {
+      background: #F9FAFB;
+    }
+    .container{
+      max-width:var(--maxw);
+      margin:0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-header{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:32px;
+      position: relative;
+    }
+    .section-header:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    .section-title{
+      font-size:1.75rem;
+      font-weight:800;
+      color: #111827;
+      position: relative;
+    }
+    .section-sub{
+      color:var(--muted);
+      font-weight:600;
+      font-size:1rem;
+      max-width: 600px;
+    }
+
+    /* About layout - two balanced panels with shape divider */
+    .about-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:24px;
+      align-items:start;
+    }
+    .about-card{
+      background:var(--card);
+      padding:24px;
+      border-radius:20px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .about-bio h3{
+      margin-bottom:12px;
+      font-size:1.2rem;
+      color: #111827;
+      position: relative;
+      display: inline-block;
+    }
+    .about-bio h3:after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    .about-bio p{
+      color:var(--muted);
+      margin-bottom:16px;
+    }
+    .about-stats{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top: 16px;
+    }
+    .about-stat{
+      background: linear-gradient(135deg, #F3F4F6, #E5E7EB);
+      padding:12px 16px;
+      border-radius:12px;
+      min-width:100px;
+      text-align:center;
+      font-weight:800;
+      color:var(--primary);
+      border: 1px solid rgba(108, 99, 255, 0.1);
+      transition: var(--transition);
+    }
+    .about-stat:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(108, 99, 255, 0.1);
+    }
+
+    /* Skills grid compact */
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .skill-card{
+      background:var(--card);
+      padding:24px;
+      border-radius:16px;
+      border: 1px solid var(--border);
+      font-weight:700;
+      color:var(--muted);
+      min-height:140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .skill-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .skill-card:hover:before {
+      transform: scaleX(1);
+    }
+
+    /* Projects / Entrepreneurial Experience */
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:24px;
+    }
+    .project-card{
+      background:var(--card);
+      border-radius:16px;
+      padding:20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .project-card:hover:before {
+      transform: scaleX(1);
+    }
+    .project-thumb{
+      width:100%;
+      height:160px;
+      border-radius:12px;
+      overflow:hidden;
+      background: linear-gradient(135deg, #F3F4F6, #E5E7EB);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border: 1px solid rgba(108, 99, 255, 0.1);
+      transition: var(--transition);
+    }
+    .project-card:hover .project-thumb {
+      transform: scale(1.02);
+    }
+    .project-thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .project-title{
+      font-weight:800;
+      font-size:1.1rem;
+      color: #111827;
+    }
+    .project-desc{
+      color:var(--muted);
+      font-size:0.95rem;
+      flex:1;
+    }
+    .project-actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    /* Publications - 3 column layout */
+    .pub-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .pub-card{
+      background:var(--card);
+      padding:20px;
+      border-radius:16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+    }
+    .pub-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+    .pub-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .pub-card:hover:before {
+      transform: scaleX(1);
+    }
+    .pub-badge{
+      background:var(--primary);
+      color:white;
+      padding:6px 12px;
+      border-radius:10px;
+      font-weight:800;
+      font-size:0.85rem;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .pub-title{
+      font-weight:800;
+      margin:8px 0 10px;
+      color: #111827;
+      line-height: 1.3;
+    }
+    .pub-meta{
+      color:var(--muted);
+      font-size:0.92rem;
+      margin-bottom:12px;
+    }
+    .pub-links a{
+      margin-right:12px;
+      font-weight:700;
+      color:var(--primary);
+      font-size:0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .pub-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Publication status indicators */
+    .pub-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .pub-status.under-review {
+      color: #F6E05E;
+    }
+    .pub-status.presented {
+      color: #68D391;
+    }
+
+    /* Thesis card */
+    .thesis-card{
+      background: linear-gradient(135deg, #F3F4F6, #E5E7EB);
+      padding:24px;
+      border-radius:16px;
+      border: 1px solid rgba(108, 99, 255, 0.1);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      grid-column: span 2;
+    }
+    .thesis-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+    .thesis-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .thesis-card:hover:before {
+      transform: scaleX(1);
+    }
+    .thesis-meta{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-bottom:12px;
+    }
+    .badge-small{
+      background:var(--primary);
+      color:white;
+      padding:6px 10px;
+      border-radius:10px;
+      font-weight:700;
+      font-size:0.85rem;
+    }
+
+    /* Contact & Footer */
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:24px;
+    }
+    .contact-card{
+      background:var(--card);
+      padding:24px;
+      border-radius:16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    footer{
+      padding:30px 20px;
+      text-align:center;
+      color:var(--muted);
+      font-weight:600;
+      background: #F9FAFB;
+    }
+    footer .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Certifications Section */
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      gap: 24px;
+    }
+    .cert-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: var(--transition);
+      position: relative;
+    }
+    .cert-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .cert-card:hover:before {
+      transform: scaleX(1);
+    }
+    .cert-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .cert-icon {
+      font-size: 1.75rem;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .cert-details {
+      flex: 1;
+    }
+    .cert-name {
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #111827;
+    }
+    .cert-org {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .cert-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .cert-link {
+      margin-top: 12px;
+    }
+
+    /* Honors & Awards Grid */
+.honors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.honor-card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.honor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.honor-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.honor-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.honor-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111827;
+  line-height: 1.3;
+}
+
+.honor-details {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Certificates Grid */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.certificate-card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.certificate-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition);
+}
+
+.certificate-card:hover:before {
+  transform: scaleX(1);
+}
+
+.cert-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.cert-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cert-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111827;
+  line-height: 1.3;
+}
+
+.cert-org {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cert-btn {
+  width: 100%;
+  margin-top: auto;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1060px) {
+  .honors-grid,
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .honors-grid,
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+    /* Improved Abstract Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-content {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 32px;
+      max-width: 700px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      transform: translateY(20px) scale(0.95);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+    }
+    .modal-content:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 20px 20px 0 0;
+    }
+    .modal-overlay.active .modal-content {
+      transform: translateY(0) scale(1);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .modal-title {
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: #111827;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--muted);
+      transition: var(--transition);
+    }
+    .modal-close:hover {
+      color: var(--primary);
+      transform: rotate(90deg);
+    }
+    .modal-body {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    /* Publication Sections */
+    .pub-section {
+      margin-bottom: 40px;
+    }
+    .pub-section-title {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      color: #111827;
+      position: relative;
+      display: inline-block;
+    }
+    .pub-section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+
+    /* Contact Icons */
+    .contact-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.2rem;
+      transition: var(--transition);
+      border: 1px solid var(--border);
+    }
+    .contact-icon:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
+    }
+
+    /* Responsive */
+    @media (max-width:1060px){
+      .hero-inner{
+        grid-template-columns: 1fr;
+        padding:30px;
+      }
+      .hero-left{
+        order:2;
+      }
+      .hero-right{
+        order:1;
+      }
+      .about-grid{
+        grid-template-columns:1fr;
+      }
+      .skills-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+      .certifications-grid{
+        grid-template-columns:1fr;
+      }
+      .pub-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+      .projects-grid{
+        grid-template-columns:1fr;
+      }
+      .thesis-card {
+        grid-column: span 1;
+      }
+      .nav-links{
+        display:none;
+      }
+      .menu-toggle{
+        display:block;
+      }
+    }
+    @media (max-width:768px){
+      .skills-grid{
+        grid-template-columns:1fr;
+      }
+      .projects-grid{
+        grid-template-columns:1fr;
+      }
+      .certifications-grid{
+        grid-template-columns:1fr;
+      }
+      .pub-grid{
+        grid-template-columns:1fr;
+      }
+      .hero {
+        padding: 100px 20px 40px;
+      }
+      .section {
+        padding: 40px 20px;
+      }
+    }
+    @media (max-width:640px){
+      .hero-inner {
+        padding: 20px;
+      }
+      .hero-cta {
+        flex-direction: column;
+        width: 100%;
+      }
+      .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+    }
+
+    /* Animation for elements */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.3s;
+    }
+
+    /* Floating animation */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" role="banner" aria-label="Main navigation">
+    <div class="nav-inner container">
+      <div class="brand">Mashrafi</div>
+      <nav aria-label="Quick links">
+        <div class="nav-links" id="navLinksDesktop">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#honors-certifications">Certifications</a>
+          <a href="#honors">Honors & Awards</a>
+          <a href="#publications">Publications</a>
+          <a href="#entrepreneur">Entrepreneurial</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#honors-certifications">Certifications</a>
+      <a href="#honors">Honors & Awards</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero" aria-label="Hero">
+      <div class="hero-inner container" role="region" aria-labelledby="heroHeading">
+        <div class="hero-left" aria-hidden="false">
+          <div class="profile-wrap" title="Jisan's photo">
+            <!-- Replace with your real portrait file; fallback used if missing -->
+            <img src="Jisan portrait.png" alt="Md. Jisan Mashrafi portrait" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=60'">
+          </div>
+
+          <div class="hero-name">
+            <h1 id="heroHeading">Md. Jisan Mashrafi</h1>
+            <div class="role">AI / ML Researcher & Engineer</div>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn btn-outline" href="#contact"><i class="fas fa-envelope"></i> Get in touch</a>
+            <a class="btn btn-cv" href="https://drive.google.com/file/d/18sO4GU8pgxscjt4gtzJ56O7Vb1n-sE7X/view?usp=sharing" target="_blank"><i class="fas fa-download"></i> Download CV</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-summary">
+            <h3>Advancing AI with practical research & engineering</h3>
+            <p>I am a driven professional with a strong foundation in AI and data science, skilled in Machine Learning, Python, and data analysis. My problem-solving skills, resilience, and passion for applying AI to real-world challenges drive me to innovate and create meaningful impact.</p>
+
+            <div class="hero-meta" aria-hidden="false">
+              <div class="stat-pill">Research — AI/ML</div>
+              <div class="stat-pill">BRAC University</div>
+              <div class="stat-pill">Publications & Projects</div>
+            </div>
+
+            <div style="margin-top:12px;color:var(--muted);font-weight:600">
+              Interested in research collaborations, AI opportunities, and applied ML research.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-labelledby="aboutTitle">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-title" id="aboutTitle">About Me</div>
+            <div class="section-sub">Driven professional with strong foundation in AI and data science</div>
+          </div>
+        </div>
+
+        <div class="about-grid" role="region" aria-label="About content">
+          <div class="about-card about-bio">
+            <h3>AI/ML Researcher & Data Scientist</h3>
+            <p>I am a driven professional with a strong foundation in AI and data science, skilled in Machine Learning, Python, and data analysis. Through internships, I gained hands-on experience in predictive modeling and AI optimization. Overcoming challenges, I enhanced my expertise with advanced certifications and research contributions. My problem-solving skills, resilience, and passion for applying AI to real-world challenges drive me to innovate and create meaningful impact.</p>
+
+            <div class="about-stats" style="margin-top:10px">
+              <div class="about-stat">3+ yrs exp</div>
+              <div class="about-stat">5+ Projects</div>
+              <div class="about-stat">14+ Publications</div>
+            </div>
+
+            <p style="margin-top:12px;color:var(--muted)">Currently seeking research collaborations and professional opportunities in applied machine learning and AI.</p>
+          </div>
+
+          <div class="about-card">
+            <h3 style="margin-bottom:8px">Quick facts</h3>
+            <ul style="list-style:none;color:var(--muted);font-weight:600;line-height:1.7;padding-left:0">
+              <li><strong>Location:</strong> Dhaka, Bangladesh</li>
+              <li><strong>Education:</strong> B.Sc. in CSE — BRAC University</li>
+              <li><strong>Email:</strong> <a href="mailto:jisanmashrafi542@gmail.com">jisanmashrafi542@gmail.com</a></li>
+              <li><strong>Phone:</strong> <a href="tel:+8801751168967">+8801751168967</a></li>
+            </ul>
+
+            <div style="margin-top:14px">
+              <strong style="display:block;margin-bottom:8px">Selected Tools & Techniques</strong>
+              <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">PyTorch</div>
+                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">TensorFlow</div>
+                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">Python</div>
+                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">Deep Learning</div>
+                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">NLP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section" aria-labelledby="skillsTitle" style="background:transparent;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-title" id="skillsTitle">Technical Expertise</div>
+            <div class="section-sub">Comprehensive skill set for modern AI/ML research</div>
+          </div>
+        </div>
+
+        <div class="skills-grid" role="list">
+          <div class="skill-card" role="listitem">
+            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Machine Learning & AI</div>
+            <div style="color:var(--muted);font-weight:600">Deep Learning (CNNs, LSTMs), NLP, Large Language Models, Federated Learning, Ensemble & Hybrid Modeling, Explainable AI, Graph Neural Networks</div>
+          </div>
+
+          <div class="skill-card" role="listitem">
+            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Statistical & Data Science</div>
+            <div style="color:var(--muted);font-weight:600">Time Series Forecasting, Anomaly Detection, Feature Engineering, Comparative Model Evaluation, Multimodal Data Fusion</div>
+          </div>
+
+          <div class="skill-card" role="listitem">
+            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Programming & Frameworks</div>
+            <div style="color:var(--muted);font-weight:600">Python, C, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH PROJECTS -->
+    <section id="projects" class="section" aria-labelledby="projectsTitle">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-title" id="projectsTitle">Research Projects</div>
+            <div class="section-sub">Selected academic and research projects</div>
+          </div>
+        </div>
+
+        <div class="projects-grid" role="list">
+          <!-- T1 = Undergraduate Thesis -->
+          <article class="project-card thesis-card" role="listitem" aria-labelledby="t1">
+            <div class="thesis-meta">
+              <div class="badge-small">Undergraduate Thesis</div>
+              <div style="font-weight:800">ReCAN — Lightweight Residual Channel Attention Network</div>
+            </div>
+            <div style="font-weight:700;color:var(--muted);margin-bottom:6px">Completed — Oct 2025 • Grade: A (95%)</div>
+            <div style="color:var(--muted);font-size:0.94rem;margin-bottom:8px">
+              Designed ReCAN: an efficient CNN-attention hybrid using ResNet-18 base + alternating skip connections and channel attention. Achieves 8–12% higher accuracy while remaining lightweight (~14.47M params) across MedMNIST datasets.
+            </div>
+            <button class="btn btn-outline" id="toggleThesis">Read Abstract</button>
+            <div id="thesisAbstract" style="display:none;margin-top:10px;color:var(--muted);font-size:0.92rem">
+              <strong>Abstract:</strong> This thesis presents ReCAN, a lightweight convolutional neural network tailored for efficient and accurate medical image classification on MedMNIST. The architecture integrates a ResNet-18 backbone with a novel multi-stage channel attention mechanism and alternating skip connections, producing superior accuracy vs. parameter count. The study includes ablation experiments, FLOPs analysis, and comparisons to MedMamba variants showing ReCAN's favorable trade-off between performance and efficiency.
+            </div>
+          </article>
+
+          <!-- ClusSumm -->
+          <article class="project-card" role="listitem" aria-labelledby="p1">
+            <div class="project-thumb" aria-hidden="true">
+              <i class="fas fa-comments" style="font-size:28px;color:var(--primary)"></i>
+            </div>
+            <div class="project-title" id="p1">ClusSumm: Hybrid Clustering-Based Summarization of Online Course Reviews</div>
+            <div class="project-desc">Developed a clustering-based NLP summarizer (12.65% compression) outperforming baselines; under journal submission.</div>
+            <div class="project-actions">
+              <a class="btn btn-outline" href="https://drive.google.com/file/d/1yHnls6FS_wcYy7Hpxebm_CJvV1o3Hbpn/view?usp=sharing" target="_blank"><i class="fas fa-file-pdf"></i> Pre-print</a>
+              <a class="btn btn-outline" href="https://www.kaggle.com/datasets/tanzinabdul/coursera-learning-feedback-multiple-domain-7k" target="_blank"><i class="fas fa-database"></i> Dataset</a>
+            </div>
+          </article>
+
+          <!-- Sentiment Analysis -->
+          <article class="project-card" role="listitem" aria-labelledby="p2">
+            <div class="project-thumb" aria-hidden="true">
+              <i class="fas fa-chart-bar" style="font-size:28px;color:var(--primary)"></i>
+            </div>
+            <div class="project-title" id="p2">Mitigating Misleading Metrics: Hybrid Model for Audience Sentiment Analysis</div>
+            <div class="project-desc">Built ML model combining sentiment and engagement metrics for reliable digital audience evaluation.</div>
+            <div class="project-actions">
+              <a class="btn btn-outline" href="https://drive.google.com/file/d/1Up6B8aSpBPtNti5BypQSCru3TCvI0jPf/view?usp=sharing" target="_blank"><i class="fas fa-file-pdf"></i> Pre-print</a>
+              <a class="btn btn-outline" href="https://www.kaggle.com/datasets/tanzinabdul/bangla-movie-and-drama-comments-sentiment-dataset" target="_blank"><i class="fas fa-database"></i> Dataset</a>
+            </div>
+          </article>
+
+          <!-- Rentorium -->
+          <article class="project-card" role="listitem" aria-labelledby="p3">
+            <div class="project-thumb" aria-hidden="true">
+              <i class="fas fa-home" style="font-size:28px;color:var(--primary)"></i>
+            </div>
+            <div class="project-title" id="p3">Rentorium: Peer-to-Peer Rental and Borrowing Platform</div>
+            <div class="project-desc">Django-based marketplace enabling secure rentals and payments, promoting a circular economy.</div>
+            <div class="project-actions">
+              <a class="btn btn-outline" href="https://github.com/TanzinAbdul/Django-Project-Rentorium" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ENTREPRENEURIAL EXPERIENCE -->
+    <section id="entrepreneur" class="section" aria-labelledby="entrepreneurTitle" style="background:linear-gradient(180deg,#fbfdff,#f8fbff);">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-title" id="entrepreneurTitle">Entrepreneurial Experience</div>
+            <div class="section-sub">CEO — <strong>neXet Lab</strong> • <a href="https://nexetlab.vercel.app/" target="_blank" style="font-weight:800">Visit neXet Lab</a></div>
+          </div>
+        </div>
+
+        <p style="color:var(--muted);margin-bottom:12px">neXet Lab is a web & AI product studio focused on building performant websites and automation tools. Below are selected delivered projects.</p>
+
+        <div class="projects-grid" role="list" aria-label="neXet Lab delivered projects">
+          <!-- Provided project cards (extracted from user data) -->
+          <article class="project-card" role="listitem" aria-labelledby="nx1">
+            <div class="project-thumb">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=60" alt="CM Rendering screenshot">
+            </div>
+            <div class="project-title" id="nx1">CM Rendering</div>
+            <div class="project-desc">A modern rendering and painting service website, focusing on high-quality rendering solutions.</div>
+            <div class="project-actions">
+              <a class="btn btn-primary" href="https://cmrendering.com.au/" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card" role="listitem" aria-labelledby="nx2">
+            <div class="project-thumb">
+              <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=60" alt="Greenacre Auto Electrical">
+            </div>
+            <div class="project-title" id="nx2">Greenacre Auto Electrical</div>
+            <div class="project-desc">Professional auto electrical service website offering repair, maintenance, and installations for vehicles.</div>
+            <div class="project-actions">
+              <a class="btn btn-primary" href="https://www.greenacreautoelectrical.com.au/" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card" role="listitem" aria-labelledby="nx3">
+            <div class="project-thumb">
+              <!-- placeholder image -> replace with actual screenshot if available -->
+              <img src="/images/get_found_on_maps.png" alt="Get Found on Maps (screenshot)" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1200&q=60'">
+            </div>
+            <div class="project-title" id="nx3">Get Found on Maps</div>
+            <div class="project-desc">A modern React site for a digital agency with smooth animations and a custom hero banner.</div>
+            <div class="project-actions">
+              <a class="btn btn-primary" href="https://getfoundonmaps.com.au/" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card" role="listitem" aria-labelledby="nx4">
+            <div class="project-thumb">
+              <img src="/images/central_grounds.jpg" alt="Central Grounds Espresso Bar" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=60'">
+            </div>
+            <div class="project-title" id="nx4">Central Grounds Espresso Bar</div>
+            <div class="project-desc">React site with clean UI and performance optimizations delivering a modern web experience.</div>
+            <div class="project-actions">
+              <a class="btn btn-primary" href="https://centralgroundsespressobar.com.au/" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== HONORS, AWARDS & CERTIFICATIONS ====== -->
+<section id="honors-certifications" class="section" aria-labelledby="honorsCertTitle">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-title" id="honorsCertTitle">Honors, Awards & Certifications</div>
+        <div class="section-sub">Recognition, achievements, and professional certifications</div>
+      </div>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Award 1 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fas fa-trophy"></i> Runner-Up, National Soccer Bot Competition</div>
+        <div class="project-desc">
+          Robotics Club of BRAC University, Dhaka, Bangladesh (Mar 2023)
+        </div>
+      </div>
+
+      <!-- Award 2 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fas fa-award"></i> The Duke of Edinburgh's Award – Bronze Level</div>
+        <div class="project-desc">
+          Leadership & Community Volunteering (Mar 2023)
+        </div>
+      </div>
+
+      <!-- Award 3 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fas fa-graduation-cap"></i> Merit-Based Scholarship (50%)</div>
+        <div class="project-desc">
+          BRAC University (Jun 2021)
+        </div>
+      </div>
+
+      <!-- Award 4 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fas fa-star"></i> Academic Excellence</div>
+        <div class="project-desc">
+          Consistent high achievement in computer science and AI research
+        </div>
+      </div>
+
+      <!-- Certificate 1 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fas fa-language"></i> IELTS Academic</div>
+        <div class="project-desc">
+          British Council | Issued: Jan 2025 | Overall: 6.0 (L:6, R:5.5, W:5.5, S:7.0)
+        </div>
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fab fa-coursera"></i> Machine Learning Specialization</div>
+        <div class="project-desc">
+          DeepLearning.AI, Stanford University | Issued: Jun 2024
+        </div>
+        <a href="https://www.coursera.org/account/accomplishments/specialization/Q5J9GS86EEHF" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> View Credential
+        </a>
+      </div>
+
+      <!-- Certificate 3 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fab fa-coursera"></i> Analyzing Video with OpenCV and NumPy</div>
+        <div class="project-desc">Coursera</div>
+        <a href="https://www.coursera.org/account/accomplishments/records/6WWCABR3WLES" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> View Credential
+        </a>
+      </div>
+
+      <!-- Certificate 4 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fas fa-building"></i> AI Job Simulation</div>
+        <div class="project-desc">Cognizant</div>
+        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/5N2ygyhzMWjKQmgCK_Cognizant_9buw4EvDpEv2jj2X4_1715894438643_completion_certificate.pdf" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> View Credential
+        </a>
+      </div>
+
+      <!-- Certificate 5 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fab fa-coursera"></i> GenAI Basics - How LLMs Work</div>
+        <div class="project-desc">Coursera</div>
+        <a href="https://www.coursera.org/account/accomplishments/records/AQE4NPDX2SPH" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> View Credential
+        </a>
+      </div>
+
+      <!-- Certificate 6 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fab fa-coursera"></i> Generative AI for Everyone</div>
+        <div class="project-desc">DeepLearning.AI</div>
+        <a href="https://www.coursera.org/account/accomplishments/records/AJB9WPV2UGKB" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> View Credential
+        </a>
+      </div>
+
+      <!-- Certificate 7 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fas fa-database"></i> Introduction to Data Science</div>
+        <div class="project-desc">Cognizant</div>
+        <a href="https://www.credly.com/badges/be366890-912b-4c07-8348-9f9499fe7db5/linked_in_profile" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> View Credential
+        </a>
+      </div>
+
+      <!-- Certificate 8 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fab fa-coursera"></i> Introduction to Generative AI</div>
+        <div class="project-desc">Google Cloud</div>
+        <a href="https://www.coursera.org/account/accomplishments/records/EYU9A9ZWREV9" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> View Credential
+        </a>
+      </div>
+
+      <!-- Certificate 9 -->
+      <div class="project-card">
+        <div class="project-title"><i class="fab fa-hackerrank"></i> Problem Solving (Basic)</div>
+        <div class="project-desc">HackerRank</div>
+        <a href="https://www.hackerrank.com/certificates/eb7d502b607e" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> View Credential
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section" aria-labelledby="publicationsTitle">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-title" id="publicationsTitle">Publications</div>
+            <div class="section-sub">Research contributions in AI/ML and Data Science</div>
+          </div>
+        </div>
+
+        <!-- Journal Publications -->
+        <div class="pub-section">
+          <h3 class="pub-section-title">Journal Publications</h3>
+          <div class="pub-grid" role="list">
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">J.1</div>
+              <div class="pub-title">Advanced Neural Network Architectures for Tomato Leaf Disease Diagnosis in Precision Agriculture</div>
+              <div class="pub-meta">Discover Sustainability (Q2 Journal) — S. Kant, H. Ghosh, I. S. Rahat, M. M. R. Emon, <strong>M. J. Mashrafi</strong>, M. A. A. Tanzin, S. N. Mohanty</div>
+              <div class="pub-links">
+                <a href="https://link.springer.com/article/10.1007/s43621-025-01149-1" target="_blank">DOI</a>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">J.2</div>
+              <div class="pub-title">Exploring Artificial Intelligence for Scalable and Interpretable Flood Risk Forecasting in Rajshahi, Bangladesh</div>
+              <div class="pub-meta">Earth Systems and Environment — H. A. Alif, <strong>M. J. Mashrafi</strong>, M. Elhag, S. Purohit</div>
+              <div class="pub-links">
+                <a href="https://docs.google.com/document/d/1jHEscLZ1CZ0jhWQOsEQfREcLMguXl5Izpm2V8Vv8k-w/edit?usp=sharing" target="_blank">Abstract</a>
+                <span class="pub-status under-review">+</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">J.3</div>
+              <div class="pub-title">Machine Learning-Driven Rainfall Forecasting Model for Sustainable and Adaptive Infrastructure Planning</div>
+              <div class="pub-meta">Discover Sustainability — H. A. Alif, <strong>M. J. Mashrafi</strong>, U. Haldar, M. M. Rahman, M. A. Miah, M. Uddin, S. B. Yousuf, M. J. Hasan</div>
+              <div class="pub-links">
+                <a href="https://docs.google.com/document/d/1_3pXNZpMR0dT8EoYZP7v9x5b2QB30bza0HWt5aOPXTo/edit?usp=sharing" target="_blank">Abstract</a>
+                <span class="pub-status under-review">+</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">J.4</div>
+              <div class="pub-title">AI-Driven Rainfall Forecasting and GIS-Based Flood Risk Mapping for Climate-Resilient Infrastructure in Bangladesh</div>
+              <div class="pub-meta">Geo: Geography and Environment — H. A. Alif, <strong>M. J. Mashrafi</strong>, M. Elhag, S. Purohit</div>
+              <div class="pub-links">
+                <a href="https://docs.google.com/document/d/1puPd0UTVMWCi2g_XUgoWtu6nj75x7IsKpqAlTfXegm8/edit?usp=sharing" target="_blank">Abstract</a>
+                <span class="pub-status under-review">+</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">J.5</div>
+              <div class="pub-title">Integrated Modeling of Long-Term Warming in Bangladesh via Statistical, ML, Deep Learning, and GIS Analyses</div>
+              <div class="pub-meta">Earth System — H. A. Alif, <strong>M. J. Mashrafi</strong>, M. Almazroui, R. Chakrabortty, T. Ali, S. Hussain, M. Elhag</div>
+              <div class="pub-links">
+                <a href="https://docs.google.com/document/d/1mkwvC01q0-AaahbJz92YLB-_UrLHqQyklCABux6rxwI/edit?usp=sharing" target="_blank">Abstract</a>
+                <span class="pub-status under-review">+</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">J.6</div>
+              <div class="pub-title">Long-Term ML Assessment of Wind Energy Potential for Sustainable Power Planning in Bangladesh</div>
+              <div class="pub-meta">Heliyon — H. A. Alif, <strong>M. J. Mashrafi</strong></div>
+              <div class="pub-links">
+                <a href="https://docs.google.com/document/d/14-v1dyVXQUpfmQkv9aISbPboLyUzF91hg_D4m-CgGIY/edit?usp=sharing" target="_blank">Abstract</a>
+                <span class="pub-status under-review">+</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conference Publications -->
+        <div class="pub-section">
+          <h3 class="pub-section-title">Conference Publications</h3>
+          <div class="pub-grid" role="list">
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.1</div>
+              <div class="pub-title">Comparative Machine Learning Framework for Rainfall Forecasting and Agricultural Loss Estimation</div>
+              <div class="pub-meta">CMSS 2025, IEEE — H. A. Alif, <strong>M. J. Mashrafi</strong>, M. Uddin, J. Ahmed, F. Faiyaz, S. Selim</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/CMSS66566.2025.11182335" target="_blank">DOI</a>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.2</div>
+              <div class="pub-title">Forecasting Literacy Development in Bangladesh: A Comparative Study of Machine Learning and Hybrid Approaches</div>
+              <div class="pub-meta">ECCE 2025, IEEE — M. A. A. Tanzin, <strong>M. J. Mashrafi</strong>, M. I. Hossain</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/ECCE64574.2025.11014044" target="_blank">DOI</a>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.3</div>
+              <div class="pub-title">PhishVQC: Optimizing Phishing URL Detection with Correlation-Based Feature Selection and Variational Quantum Classifier</div>
+              <div class="pub-meta">ISACC 2025, IEEE — M. F. Shahriyar, G. Tanbhir, A. M. Raihan Chy, M. A. A. Tanzin, <strong>M. J. Mashrafi</strong></div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/ISACC65211.2025.10969366" target="_blank">DOI</a>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.4</div>
+              <div class="pub-title">Hybrid CNN–Random Forest Model for Predicting Water Level Fluctuations in Kaptai Reservoir</div>
+              <div class="pub-meta">ECCE 2025, IEEE — A. Sarkar, M. F. Shahriyar, A. M. Raihan Chy, M. A. A. Tanzin, <strong>M. J. Mashrafi</strong>, A. Fahim</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/ECCE64574.2025.11013997" target="_blank">DOI</a>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.5</div>
+              <div class="pub-title">Unsupervised Climate Anomaly Detection with Isolation Forest and One-Class SVM</div>
+              <div class="pub-meta">ICISC 2025, IEEE — H. A. Alif, A. D. Nath, <strong>M. J. Mashrafi</strong>, U. F. Lamia, S. R. Islam, S. S. Oishe</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/ICISC65841.2025.11188374" target="_blank">DOI</a>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.6</div>
+              <div class="pub-title">Challenging Federated Learning for DrugGene Interaction Prediction: A Comparative Study of FedAvg and FedProx Feasibility</div>
+              <div class="pub-meta">ICIDCA 2025, IEEE, Coimbatore, India — <strong>M. J. Mashrafi</strong>, M. M. Rahman, H. A. Alif, M. A. Miah, U. Haldar, M. H. Hasan</div>
+              <div class="pub-links">
+                <a href="https://drive.google.com/file/d/11RRgI3pjFcZfFhJhIWSJUsLp7hdJYd6R/view?usp=sharing" target="_blank">Certificate</a>
+                <span class="pub-status presented">*</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.7</div>
+              <div class="pub-title">Federated vs. Centralized GCNs for Privacy-Preserving DrugGene Interaction Prediction</div>
+              <div class="pub-meta">ICIDCA 2025, IEEE, Coimbatore, India — <strong>M. J. Mashrafi</strong>, U. Haldar, H. A. Alif, L. Hasan, M. Uddin, M. M. Rahman</div>
+              <div class="pub-links">
+                <a href="https://drive.google.com/file/d/1yev5hGkqsXYjkNKVnFxCaUsKrnyC3vNE/view?usp=sharing" target="_blank">Certificate</a>
+                <span class="pub-status presented">*</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.8</div>
+              <div class="pub-title">Evaluating LLMs in Higher Education: A SEM-Based Comparison of ChatGPT and DeepSeek Using the IS Success Model</div>
+              <div class="pub-meta">ASIANCON 2025, Pune, India — H. A. Alif, <strong>M. J. Mashrafi</strong>, S. R. Islam, A. Fahim, A. D. Nath, J. Ahmed</div>
+              <div class="pub-links">
+                <a href="https://drive.google.com/file/d/17p9-rhjL-biEDz5RVH4JPx8vJ4osHzBO/view?usp=sharing" target="_blank">Certificate</a>
+                <span class="pub-status presented">*</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.9</div>
+              <div class="pub-title">Explainable Machine Learning for Preoperative Prediction of Tumor Focality in Thyroid Cancer Using Lifestyle and Clinical Data</div>
+              <div class="pub-meta">COMPUTINGCON 2025, Pune, India — H. A. Alif, <strong>M. J. Mashrafi</strong>, S. Selim, U. Haldar, A. Ullah, R. Das</div>
+              <div class="pub-links">
+                <a href="https://drive.google.com/file/d/1_wDZB3N_xAQNVZXA4hvt2LvUuTw7KMDc/view?usp=sharing" target="_blank">Certificate</a>
+                <span class="pub-status presented">*</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.10</div>
+              <div class="pub-title">Unsupervised Machine Learning for Climate Surveillance: Comparative Temperature Anomaly Detection in Northwestern Bangladesh</div>
+              <div class="pub-meta">ICICIS 2025, Pune, India — H. A. Alif, S. Selim, <strong>M. J. Mashrafi</strong>, A. Ullah, U. Haldar, M. M. Rahman</div>
+              <div class="pub-links">
+                <a href="https://docs.google.com/document/d/17VsCnRFlP66oTxFuKJ5CtqjQI8MdM-uF/edit?usp=sharing&ouid=102072525972974652617&rtpof=true&sd=true" target="_blank">Certificate</a>
+                <span class="pub-status presented">*</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.11</div>
+              <div class="pub-title">Constructive Hypergraph Network with Adaptive Negative Sampling for Accurate Discovery and Risk Calibration of Low-Frequency Drug–Drug Interactions</div>
+              <div class="pub-meta">ICICNCT 2026, Bidar, India — <strong>M. J. Mashrafi</strong>, H. A. Alif, M. Uddin, S. Selim, U. Haldar, M. B. Tabassum</div>
+              <div class="pub-links">
+                <a href="https://drive.google.com/file/d/114izVgjrsXyNhsLpqVDIBZQ9QnvqQJAV/view?usp=sharing" target="_blank">Certificate</a>
+                <span class="pub-status presented">*</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.12</div>
+              <div class="pub-title">Adaptive Ensemble Learning with Dynamic Weighting for Regional Temperature Extremes Detection Using Climate Teleconnections in Australia</div>
+              <div class="pub-meta">ICCES 2025, Coimbatore, India — <strong>M. J. Mashrafi</strong>, H. A. Alif, A. Biswas, N. Majumder, F. A. Romit, I. U. Alam</div>
+              <div class="pub-links">
+                <a href="#" target="_blank">Certificate</a>
+                <span class="pub-status presented">*</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.13</div>
+              <div class="pub-title">Causality-Informed XGBoost Framework for Attribution of Temperature Extremes in Remote Maritime Climates Using Climate Oscillation Patterns in Australia</div>
+              <div class="pub-meta">ICIIET 2025, India — <strong>M. J. Mashrafi</strong>, V. Debnath, H. A. Alif, Z. B. Sajid, R. Tajrin, R. N. Tasin</div>
+              <div class="pub-links">
+                <a href="#" target="_blank">Certificate</a>
+                <span class="pub-status presented">*</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contactTitle">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-title" id="contactTitle">Contact</div>
+            <div class="section-sub">Get in touch for collaborations or opportunities</div>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 style="margin-bottom:8px">Let's connect</h3>
+            <p style="color:var(--muted);margin-bottom:12px">I'm always open to discussing research collaborations, AI opportunities, or new projects.</p>
+
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+              <a class="btn btn-outline" href="mailto:jisanmashrafi542@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+              <a class="btn btn-outline" href="https://www.linkedin.com/in/md-jisan-mashrafi/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a class="btn btn-outline" href="https://github.com/mdjisanmashrafi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+
+            <div class="contact-icons">
+              <a href="mailto:jisanmashrafi542@gmail.com" class="contact-icon" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/md-jisan-mashrafi/" class="contact-icon" aria-label="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/mdjisanmashrafi" class="contact-icon" aria-label="GitHub" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://scholar.google.com/citations?user=chPlK94AAAAJ&hl=en" class="contact-icon" aria-label="Google Scholar" target="_blank">
+                <i class="fas fa-graduation-cap"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3 style="margin-bottom:8px">Quick links</h3>
+            <ul style="list-style:none;padding-left:0;color:var(--muted);font-weight:600;line-height:1.8">
+              <li><a href="https://scholar.google.com/citations?user=chPlK94AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a></li>
+              <li><a href="https://drive.google.com/file/d/18sO4GU8pgxscjt4gtzJ56O7Vb1n-sE7X/view?usp=sharing" target="_blank"><i class="fas fa-file-pdf"></i> Download CV</a></li>
+              <li><a href="tel:+8801751168967"><i class="fas fa-phone"></i> +8801751168967</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Md. Jisan Mashrafi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL FOR ABSTRACTS -->
+  <div class="modal-overlay" id="abstractModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="modalTitle">Abstract</div>
+        <button class="modal-close" id="closeModal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Abstract content will be inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !expanded);
+      mobileMenu.classList.toggle('active');
+      
+      // Toggle menu icon
+      const icon = menuToggle.querySelector('i');
+      if (mobileMenu.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+
+    // Thesis abstract toggle
+    const toggleThesis = document.getElementById('toggleThesis');
+    const thesisAbstract = document.getElementById('thesisAbstract');
+    
+    if (toggleThesis) {
+      toggleThesis.addEventListener('click', () => {
+        const isVisible = thesisAbstract.style.display === 'block';
+        thesisAbstract.style.display = isVisible ? 'none' : 'block';
+        toggleThesis.textContent = isVisible ? 'Read Abstract' : 'Hide Abstract';
+      });
+    }
+
+    // Abstract modal functionality
+    const abstractModal = document.getElementById('abstractModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    const closeModal = document.getElementById('closeModal');
+    
+    // Close modal when clicking outside content
+    abstractModal.addEventListener('click', (e) => {
+      if (e.target === abstractModal) {
+        abstractModal.classList.remove('active');
+      }
+    });
+    
+    closeModal.addEventListener('click', () => {
+      abstractModal.classList.remove('active');
+    });
+    
+    // Add click handlers to abstract links
+    document.querySelectorAll('a[href*="docs.google.com/document"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const pubTitle = link.closest('.pub-card').querySelector('.pub-title').textContent;
+        modalTitle.textContent = pubTitle;
+        modalBody.innerHTML = `
+          <p>This abstract is available via the provided Google Docs link.</p>
+          <p>You can access the full abstract by clicking the link below:</p>
+          <a href="${link.href}" target="_blank" class="btn btn-primary" style="margin-top: 12px;">
+            <i class="fas fa-external-link-alt"></i> View Abstract on Google Docs
+          </a>
+        `;
+        abstractModal.classList.add('active');
+      });
+    });
+
+    // Enhanced smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        
+        // Skip if it's just "#" or external links
+        if (href === '#' || href.includes('://')) return;
+        
+        e.preventDefault();
+        
+        const targetId = href;
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
+          
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+          
+          // Update URL without page jump
+          history.pushState(null, null, href);
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Close mobile menu when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1060) {
+        mobileMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  </script>
+</body>
+</html>
