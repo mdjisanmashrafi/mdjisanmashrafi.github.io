@@ -1143,7 +1143,48 @@
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
     }
+.service-card{
+    display:flex;
+    gap:20px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    transition:var(--transition);
+}
 
+.service-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.1);
+}
+
+.service-icon{
+    width:50px;
+    height:50px;
+    background:#111827;
+    color:#fff;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.service-content h3{
+    margin-bottom:12px;
+    color:#111827;
+}
+
+.service-content ul{
+    padding-left:20px;
+    color:#4B5563;
+}
+
+.service-content li{
+    margin-bottom:10px;
+    line-height:1.6;
+}
     /* Responsive */
     @media (max-width:1060px){
       .hero-inner{
@@ -1279,6 +1320,7 @@
           <a href="#honors-certifications">Honors & Awards</a>
          <a href="#publications">Publications</a>
           <a href="#entrepreneur">Entrepreneurial</a>
+          <a href="#academic-service">Academic Service</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -1297,7 +1339,9 @@
       <a href="#honors-certifications">Certifications</a>
       <a href="#honors">Honors & Awards</a>
       <a href="#publications">Publications</a>
+      <a href="#academic-service">Academic Service</a>
       <a href="#contact">Contact</a>
+
     </div>
   </header>
 
@@ -1932,6 +1976,43 @@
 
           </div>
         </div>
+
+</section> <!-- Close publications section -->
+
+        <!-- Academic Service -->
+    <section id="academic-service" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Academic Service</h2>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-user-check"></i>
+          </div>
+
+          <div class="service-content">
+            <h3>Reviewer</h3>
+
+            <ul>
+              <li>
+                Reviewer for 
+                <strong>Earth Systems and Environment</strong> 
+                (Q1 Journal, Springer Nature)
+              </li>
+
+              <li>
+                Reviewer for 
+                <strong>NAACL (North American Chapter of the Association for Computational Linguistics)</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    </section> <!-- Close academic service section -->
+
     <!-- CONTACT -->
     <section id="contact" class="section" aria-labelledby="contactTitle">
       <div class="container">
