@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Md. Jisan Mashrafi — AI/ML Researcher</title>
+  <title>Md. Jisan Mashrafi — AI Researcher | MPhil Candidate</title>
 
   <!-- Fonts & Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -235,15 +235,13 @@
       margin-top:-10px;
       line-height:1.05;
     }
-    .hero-name h1{
-      font-size:1.75rem;
-      font-weight:800;
-      letter-spacing:-0.02em;
-      margin-bottom:8px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+.hero-name h1{
+    font-size:1.75rem;
+    font-weight:800;
+    letter-spacing:-0.02em;
+    margin-bottom:8px;
+    color:#000;
+}
     .hero-name .role{
       color:var(--muted);
       font-weight:600;
@@ -301,48 +299,63 @@
     .btn:hover:before {
       left: 100%;
     }
-    .btn-primary{
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color:white;
-      box-shadow: 0 8px 20px rgba(108, 99, 255, 0.2);
-    }
-    .btn-primary:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(108, 99, 255, 0.3);
-    }
-    .btn-outline{
-      background:transparent;
-      border: 2px solid var(--border);
-      color:var(--muted);
-      position: relative;
-      z-index: 1;
-    }
-    .btn-outline:hover{
-      background:var(--light);
-      border-color: var(--primary);
-      color: var(--primary);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(108, 99, 255, 0.1);
-    }
+.btn-primary{
+    background: #111827;
+    color: #fff;
+    border: 2px solid #111827;
+    padding: 10px 18px;          /* Reduced size */
+    font-size: 0.9rem;           /* Slightly smaller text */
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 6px 15px rgba(17, 24, 39, 0.12);
+}
+
+.btn-primary:hover{
+    background: #F3F4F6;         /* Light gray */
+    color: #111827;
+    border-color: #111827;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(17, 24, 39, 0.15);
+}
+
+.btn-outline{
+    background: #fff;
+    color: #111827;
+    border: 2px solid #111827;
+    padding: 10px 18px;          /* Reduced size */
+    font-size: 0.9rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-outline:hover{
+    background: #F3F4F6;         /* Light gray */
+    color: #111827;
+    border-color: #111827;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(17, 24, 39, 0.12);
+}
     
     /* Enhanced Download CV button */
-    .btn-cv {
-      background: linear-gradient(135deg, var(--secondary), #FF4D6D);
-      color: white;
-      box-shadow: 0 8px 20px rgba(255, 101, 132, 0.2);
-      font-weight: 700;
-      padding: 12px 22px;
-      border-radius: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: var(--transition);
-    }
-    .btn-cv:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(255, 101, 132, 0.3);
-      background: linear-gradient(135deg, #FF4D6D, #FF3366);
-    }
+.btn-cv {
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    padding: 12px 22px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.btn-cv:hover {
+    background: #fff;
+    color: #000;
+    border-color: #000;
+}
 
     /* Right hero panel (compact about summary) */
     .hero-right{
@@ -1256,7 +1269,7 @@
   <!-- NAV -->
   <header class="nav" role="banner" aria-label="Main navigation">
     <div class="nav-inner container">
-      <div class="brand">Mashrafi</div>
+      <div class="brand">Jisan</div>
       <nav aria-label="Quick links">
         <div class="nav-links" id="navLinksDesktop">
           <a href="#home">Home</a>
@@ -1301,7 +1314,7 @@
 
           <div class="hero-name">
             <h1 id="heroHeading">Md. Jisan Mashrafi</h1>
-            <div class="role">AI / ML Researcher & Engineer</div>
+            <div class="role">AI Researcher | MPhil Candidate in Artificial Intelligence</div>
           </div>
 
           <div class="hero-cta">
@@ -1312,13 +1325,13 @@
 
         <div class="hero-right">
           <div class="hero-summary">
-            <h3>Advancing AI with practical research & engineering</h3>
-            <p>I am a driven professional with a strong foundation in AI and data science, skilled in Machine Learning, Python, and data analysis. My problem-solving skills, resilience, and passion for applying AI to real-world challenges drive me to innovate and create meaningful impact.</p>
+            <h3>Building Continual AI Systems for Earth Observation and Environmental Intelligence</h3>
+            <p>I am an Artificial Intelligence researcher specializing in multimodal foundation models, continual learning, and Earth observation intelligence. My current MPhil research focuses on Earth Copilot, a continual multimodal world model that integrates satellite imagery, SAR, DEM, and geospatial data to enable adaptive environmental monitoring and long-term reasoning. My research aims to develop AI systems capable of continuously learning from changing planetary conditions while supporting climate resilience, disaster management, and sustainable environmental decision-making.</p>
 
             <div class="hero-meta" aria-hidden="false">
-              <div class="stat-pill">Research — AI/ML</div>
-              <div class="stat-pill">BRAC University</div>
-              <div class="stat-pill">Publications & Projects</div>
+              <div class="stat-pill">MPhil — AI Researcher</div>
+              <div class="stat-pill">Universiti Teknologi Malaysia</div>
+              <div class="stat-pill">Earth Observation AI</div>
             </div>
 
             <div style="margin-top:12px;color:var(--muted);font-weight:600">
@@ -1335,19 +1348,19 @@
         <div class="section-header">
           <div>
             <div class="section-title" id="aboutTitle">About Me</div>
-            <div class="section-sub">Driven professional with strong foundation in AI and data science</div>
+            <div class="section-sub">Advancing AI for environmental intelligence and dynamic Earth observation</div>
           </div>
         </div>
 
         <div class="about-grid" role="region" aria-label="About content">
           <div class="about-card about-bio">
-            <h3>AI/ML Researcher & Data Scientist</h3>
-            <p>I am a driven professional with a strong foundation in AI and data science, skilled in Machine Learning, Python, and data analysis. Through internships, I gained hands-on experience in predictive modeling and AI optimization. Overcoming challenges, I enhanced my expertise with advanced certifications and research contributions. My problem-solving skills, resilience, and passion for applying AI to real-world challenges drive me to innovate and create meaningful impact.</p>
+            <h3>AI Researcher & MPhil Candidate</h3>
+            <p>AI researcher specializing in deep learning, multimodal AI, and geospatial intelligence. Currently pursuing an MPhil in Artificial Intelligence, my research explores continual multimodal world models for dynamic Earth observation. I work on integrating transformer-based architectures, foundation models, and continual learning techniques to build adaptive AI systems capable of understanding long-term environmental changes. My research interests include remote sensing, climate intelligence, environmental monitoring, and AI-driven decision support.</p>
 
             <div class="about-stats" style="margin-top:10px">
               <div class="about-stat">3+ yrs exp</div>
               <div class="about-stat">5+ Projects</div>
-              <div class="about-stat">14+ Publications</div>
+              <div class="about-stat">21+ Publications</div>
             </div>
 
             <p style="margin-top:12px;color:var(--muted)">Currently seeking research collaborations and professional opportunities in applied machine learning and AI.</p>
@@ -1356,20 +1369,20 @@
           <div class="about-card">
             <h3 style="margin-bottom:8px">Quick facts</h3>
             <ul style="list-style:none;color:var(--muted);font-weight:600;line-height:1.7;padding-left:0">
-              <li><strong>Location:</strong> Dhaka, Bangladesh</li>
-              <li><strong>Education:</strong> B.Sc. in CSE — BRAC University</li>
+              <li><strong>Location:</strong> Kuala Lumpur, Malaysia</li>
+              <li><strong>Education:</strong><br>MPhil in Artificial Intelligence — Universiti Teknologi Malaysia (UTM)<br>B.Sc. in Computer Science & Engineering — BRAC University</li>
               <li><strong>Email:</strong> <a href="mailto:jisanmashrafi542@gmail.com">jisanmashrafi542@gmail.com</a></li>
-              <li><strong>Phone:</strong> <a href="tel:+8801751168967">+8801751168967</a></li>
+              <li><strong>Phone:</strong> <a href="tel:+60 11-3514 0447">+60 11-3514 0447</a></li>
             </ul>
 
             <div style="margin-top:14px">
               <strong style="display:block;margin-bottom:8px">Selected Tools & Techniques</strong>
               <div style="display:flex;flex-wrap:wrap;gap:8px">
-                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">PyTorch</div>
-                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">TensorFlow</div>
-                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">Python</div>
-                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">Deep Learning</div>
-                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">NLP</div>
+                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">Diffusion Models</div>
+                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">Foundation Models</div>
+                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">Continual Learning</div>
+                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">Geospatial AI</div>
+                <div style="background:#F3F4F6;padding:8px 10px;border-radius:10px;font-weight:700">Remote Sensing AI</div>
               </div>
             </div>
           </div>
@@ -1388,20 +1401,37 @@
         </div>
 
         <div class="skills-grid" role="list">
+          
           <div class="skill-card" role="listitem">
-            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Machine Learning & AI</div>
-            <div style="color:var(--muted);font-weight:600">Deep Learning (CNNs, LSTMs), NLP, Large Language Models, Federated Learning, Ensemble & Hybrid Modeling, Explainable AI, Graph Neural Networks</div>
+            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Artificial Intelligence & Machine Learning</div>
+            <div style="color:var(--muted);font-weight:600;font-size:0.95rem;">Developing robust predictive models, ensemble learning, and advanced statistical analysis for complex datasets.</div>
           </div>
 
           <div class="skill-card" role="listitem">
-            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Statistical & Data Science</div>
-            <div style="color:var(--muted);font-weight:600">Time Series Forecasting, Anomaly Detection, Feature Engineering, Comparative Model Evaluation, Multimodal Data Fusion</div>
+            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Deep Learning & Neural Networks</div>
+            <div style="color:var(--muted);font-weight:600;font-size:0.95rem;">Designing scalable CNNs, LSTMs, and transformer-based architectures for sophisticated pattern recognition.</div>
           </div>
 
           <div class="skill-card" role="listitem">
-            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Programming & Frameworks</div>
-            <div style="color:var(--muted);font-weight:600">Python, C, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</div>
+            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Multimodal Foundation Models</div>
+            <div style="color:var(--muted);font-weight:600;font-size:0.95rem;">Fusing diverse data modalities to construct large-scale, adaptable foundation models for robust reasoning.</div>
           </div>
+
+          <div class="skill-card" role="listitem">
+            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Continual Learning & World Models</div>
+            <div style="color:var(--muted);font-weight:600;font-size:0.95rem;">Building adaptive AI systems that learn dynamic representations continuously while mitigating catastrophic forgetting.</div>
+          </div>
+
+          <div class="skill-card" role="listitem">
+            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Earth Observation & Remote Sensing AI</div>
+            <div style="color:var(--muted);font-weight:600;font-size:0.95rem;">Extracting environmental intelligence from optical imagery, SAR, DEMs, and multi-temporal geospatial data.</div>
+          </div>
+
+          <div class="skill-card" role="listitem">
+            <div style="font-size:1rem;font-weight:800;margin-bottom:6px">Programming & AI Engineering</div>
+            <div style="color:var(--muted);font-weight:600;font-size:0.95rem;">Implementing high-performance research pipelines using Python, PyTorch, TensorFlow, and geospatial libraries.</div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1417,19 +1447,19 @@
         </div>
 
         <div class="projects-grid" role="list">
-          <!-- T1 = Undergraduate Thesis -->
+          <!-- T1 = MPhil Research Thesis -->
           <article class="project-card thesis-card" role="listitem" aria-labelledby="t1">
             <div class="thesis-meta">
-              <div class="badge-small">Undergraduate Thesis</div>
-              <div style="font-weight:800">ReCAN — Lightweight Residual Channel Attention Network</div>
+              <div class="badge-small">MPhil Research</div>
+              <div style="font-weight:800">Earth Copilot: A Continual Multimodal World Model</div>
             </div>
-            <div style="font-weight:700;color:var(--muted);margin-bottom:6px">Completed — Oct 2025 • Grade: A (95%)</div>
+            <div style="font-weight:700;color:var(--muted);margin-bottom:6px">Ongoing Research — Universiti Teknologi Malaysia (UTM)</div>
             <div style="color:var(--muted);font-size:0.94rem;margin-bottom:8px">
-              Designed ReCAN: an efficient CNN-attention hybrid using ResNet-18 base + alternating skip connections and channel attention. Achieves 8–12% higher accuracy while remaining lightweight (~14.47M params) across MedMNIST datasets.
+              Developing a continual multimodal world model designed for dynamic Earth observation and long-term environmental intelligence. The system integrates optical imagery, SAR, DEM, and geospatial data through transformer-based fusion to detect anomalies, track long-term trends, and provide "what-if" scenario analysis.
             </div>
             <button class="btn btn-outline" id="toggleThesis">Read Abstract</button>
             <div id="thesisAbstract" style="display:none;margin-top:10px;color:var(--muted);font-size:0.92rem">
-              <strong>Abstract:</strong> This thesis presents ReCAN, a lightweight convolutional neural network tailored for efficient and accurate medical image classification on MedMNIST. The architecture integrates a ResNet-18 backbone with a novel multi-stage channel attention mechanism and alternating skip connections, producing superior accuracy vs. parameter count. The study includes ablation experiments, FLOPs analysis, and comparisons to MedMamba variants showing ReCAN's favorable trade-off between performance and efficiency.
+              <strong>Abstract:</strong> Recent advances in multimodal foundation models have significantly improved Earth observation; however, most existing models remain static after pretraining and cannot continuously adapt to evolving environmental conditions. This research proposes Earth Copilot, a continual multimodal world model that learns a dynamic latent representation of the Earth by integrating optical imagery, synthetic aperture radar (SAR), digital elevation models, and ancillary geospatial data. The proposed framework combines transformer-based multimodal fusion with continual learning techniques, including selective replay, regularization, adaptive fusion, and concept drift detection, to enable lifelong learning from streaming satellite observations while mitigating catastrophic forgetting. Unlike conventional Earth observation models that perform isolated prediction tasks, Earth Copilot maintains a persistent environmental representation to support long-term reasoning, anomaly detection, and scenario-based decision-making.
             </div>
           </article>
 
@@ -1473,6 +1503,7 @@
         </div>
       </div>
     </section>
+
     <!-- ENTREPRENEURIAL EXPERIENCE -->
     <section id="entrepreneur" class="section" aria-labelledby="entrepreneurTitle" style="background:linear-gradient(180deg,#fbfdff,#f8fbff);">
       <div class="container">
@@ -1486,7 +1517,6 @@
         <p style="color:var(--muted);margin-bottom:12px">neXet Lab is a web & AI product studio focused on building performant websites and automation tools. Below are selected delivered projects.</p>
 
         <div class="projects-grid" role="list" aria-label="neXet Lab delivered projects">
-          <!-- Provided project cards (extracted from user data) -->
           <article class="project-card" role="listitem" aria-labelledby="nx1">
             <div class="project-thumb">
               <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=60" alt="CM Rendering screenshot">
@@ -1511,7 +1541,6 @@
 
           <article class="project-card" role="listitem" aria-labelledby="nx3">
             <div class="project-thumb">
-              <!-- placeholder image -> replace with actual screenshot if available -->
               <img src="/images/get_found_on_maps.png" alt="Get Found on Maps (screenshot)" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1200&q=60'">
             </div>
             <div class="project-title" id="nx3">Get Found on Maps</div>
@@ -1536,132 +1565,124 @@
     </section>
 
     <!-- ====== HONORS, AWARDS & CERTIFICATIONS ====== -->
-<section id="honors-certifications" class="section" aria-labelledby="honorsCertTitle">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <div class="section-title" id="honorsCertTitle">Honors, Awards & Certifications</div>
-        <div class="section-sub">Recognition, achievements, and professional certifications</div>
-      </div>
-    </div>
+    <section id="honors-certifications" class="section" aria-labelledby="honorsCertTitle">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-title" id="honorsCertTitle">Honors, Awards & Certifications</div>
+            <div class="section-sub">Recognition, achievements, and professional certifications</div>
+          </div>
+        </div>
 
-    <div class="projects-grid">
-      <!-- Award 1 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fas fa-trophy"></i> Runner-Up, National Soccer Bot Competition</div>
-        <div class="project-desc">
-          Robotics Club of BRAC University, Dhaka, Bangladesh (Mar 2023)
+        <div class="projects-grid">
+          <!-- Award 1 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fas fa-trophy"></i> Runner-Up, National Soccer Bot Competition</div>
+            <div class="project-desc">
+              Robotics Club of BRAC University, Dhaka, Bangladesh (Mar 2023)
+            </div>
+          </div>
+
+          <!-- Award 2 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fas fa-award"></i> The Duke of Edinburgh's Award – Bronze Level</div>
+            <div class="project-desc">
+              Leadership & Community Volunteering (Mar 2023)
+            </div>
+          </div>
+
+          <!-- Award 3 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fas fa-graduation-cap"></i> Merit-Based Scholarship (50%)</div>
+            <div class="project-desc">
+              BRAC University (Jun 2021)
+            </div>
+          </div>
+
+          <!-- Award 4 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fas fa-star"></i> Academic Excellence</div>
+            <div class="project-desc">
+              Consistent high achievement in computer science and AI research
+            </div>
+          </div>
+
+          <!-- Certificate 2 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fab fa-coursera"></i> Machine Learning Specialization</div>
+            <div class="project-desc">
+              DeepLearning.AI, Stanford University | Issued: Jun 2024
+            </div>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/Q5J9GS86EEHF" target="_blank" class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> View Credential
+            </a>
+          </div>
+
+          <!-- Certificate 3 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fab fa-coursera"></i> Analyzing Video with OpenCV and NumPy</div>
+            <div class="project-desc">Coursera</div>
+            <a href="https://www.coursera.org/account/accomplishments/records/6WWCABR3WLES" target="_blank" class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> View Credential
+            </a>
+          </div>
+
+          <!-- Certificate 4 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fas fa-building"></i> AI Job Simulation</div>
+            <div class="project-desc">Cognizant</div>
+            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/5N2ygyhzMWjKQmgCK_Cognizant_9buw4EvDpEv2jj2X4_1715894438643_completion_certificate.pdf" target="_blank" class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> View Credential
+            </a>
+          </div>
+
+          <!-- Certificate 5 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fab fa-coursera"></i> GenAI Basics - How LLMs Work</div>
+            <div class="project-desc">Coursera</div>
+            <a href="https://www.coursera.org/account/accomplishments/records/AQE4NPDX2SPH" target="_blank" class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> View Credential
+            </a>
+          </div>
+
+          <!-- Certificate 6 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fab fa-coursera"></i> Generative AI for Everyone</div>
+            <div class="project-desc">DeepLearning.AI</div>
+            <a href="https://www.coursera.org/account/accomplishments/records/AJB9WPV2UGKB" target="_blank" class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> View Credential
+            </a>
+          </div>
+
+          <!-- Certificate 7 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fas fa-database"></i> Introduction to Data Science</div>
+            <div class="project-desc">Cognizant</div>
+            <a href="https://www.credly.com/badges/be366890-912b-4c07-8348-9f9499fe7db5/linked_in_profile" target="_blank" class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> View Credential
+            </a>
+          </div>
+
+          <!-- Certificate 8 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fab fa-coursera"></i> Introduction to Generative AI</div>
+            <div class="project-desc">Google Cloud</div>
+            <a href="https://www.coursera.org/account/accomplishments/records/EYU9A9ZWREV9" target="_blank" class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> View Credential
+            </a>
+          </div>
+
+          <!-- Certificate 9 -->
+          <div class="project-card">
+            <div class="project-title"><i class="fab fa-hackerrank"></i> Problem Solving (Basic)</div>
+            <div class="project-desc">HackerRank</div>
+            <a href="https://www.hackerrank.com/certificates/eb7d502b607e" target="_blank" class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> View Credential
+            </a>
+          </div>
         </div>
       </div>
-
-      <!-- Award 2 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fas fa-award"></i> The Duke of Edinburgh's Award – Bronze Level</div>
-        <div class="project-desc">
-          Leadership & Community Volunteering (Mar 2023)
-        </div>
-      </div>
-
-      <!-- Award 3 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fas fa-graduation-cap"></i> Merit-Based Scholarship (50%)</div>
-        <div class="project-desc">
-          BRAC University (Jun 2021)
-        </div>
-      </div>
-
-      <!-- Award 4 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fas fa-star"></i> Academic Excellence</div>
-        <div class="project-desc">
-          Consistent high achievement in computer science and AI research
-        </div>
-      </div>
-
-      <!-- Certificate 1 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fas fa-language"></i> IELTS Academic</div>
-        <div class="project-desc">
-          British Council | Issued: Jan 2025 | Overall: 6.0 (L:6, R:5.5, W:5.5, S:7.0)
-        </div>
-      </div>
-
-      <!-- Certificate 2 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fab fa-coursera"></i> Machine Learning Specialization</div>
-        <div class="project-desc">
-          DeepLearning.AI, Stanford University | Issued: Jun 2024
-        </div>
-        <a href="https://www.coursera.org/account/accomplishments/specialization/Q5J9GS86EEHF" target="_blank" class="btn btn-primary">
-          <i class="fas fa-external-link-alt"></i> View Credential
-        </a>
-      </div>
-
-      <!-- Certificate 3 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fab fa-coursera"></i> Analyzing Video with OpenCV and NumPy</div>
-        <div class="project-desc">Coursera</div>
-        <a href="https://www.coursera.org/account/accomplishments/records/6WWCABR3WLES" target="_blank" class="btn btn-primary">
-          <i class="fas fa-external-link-alt"></i> View Credential
-        </a>
-      </div>
-
-      <!-- Certificate 4 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fas fa-building"></i> AI Job Simulation</div>
-        <div class="project-desc">Cognizant</div>
-        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/5N2ygyhzMWjKQmgCK_Cognizant_9buw4EvDpEv2jj2X4_1715894438643_completion_certificate.pdf" target="_blank" class="btn btn-primary">
-          <i class="fas fa-external-link-alt"></i> View Credential
-        </a>
-      </div>
-
-      <!-- Certificate 5 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fab fa-coursera"></i> GenAI Basics - How LLMs Work</div>
-        <div class="project-desc">Coursera</div>
-        <a href="https://www.coursera.org/account/accomplishments/records/AQE4NPDX2SPH" target="_blank" class="btn btn-primary">
-          <i class="fas fa-external-link-alt"></i> View Credential
-        </a>
-      </div>
-
-      <!-- Certificate 6 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fab fa-coursera"></i> Generative AI for Everyone</div>
-        <div class="project-desc">DeepLearning.AI</div>
-        <a href="https://www.coursera.org/account/accomplishments/records/AJB9WPV2UGKB" target="_blank" class="btn btn-primary">
-          <i class="fas fa-external-link-alt"></i> View Credential
-        </a>
-      </div>
-
-      <!-- Certificate 7 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fas fa-database"></i> Introduction to Data Science</div>
-        <div class="project-desc">Cognizant</div>
-        <a href="https://www.credly.com/badges/be366890-912b-4c07-8348-9f9499fe7db5/linked_in_profile" target="_blank" class="btn btn-primary">
-          <i class="fas fa-external-link-alt"></i> View Credential
-        </a>
-      </div>
-
-      <!-- Certificate 8 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fab fa-coursera"></i> Introduction to Generative AI</div>
-        <div class="project-desc">Google Cloud</div>
-        <a href="https://www.coursera.org/account/accomplishments/records/EYU9A9ZWREV9" target="_blank" class="btn btn-primary">
-          <i class="fas fa-external-link-alt"></i> View Credential
-        </a>
-      </div>
-
-      <!-- Certificate 9 -->
-      <div class="project-card">
-        <div class="project-title"><i class="fab fa-hackerrank"></i> Problem Solving (Basic)</div>
-        <div class="project-desc">HackerRank</div>
-        <a href="https://www.hackerrank.com/certificates/eb7d502b607e" target="_blank" class="btn btn-primary">
-          <i class="fas fa-external-link-alt"></i> View Credential
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- PUBLICATIONS -->
     <section id="publications" class="section" aria-labelledby="publicationsTitle">
@@ -1673,204 +1694,245 @@
           </div>
         </div>
 
-        <!-- Journal Publications -->
+        <!-- Journal Publications (Published / Accepted) -->
         <div class="pub-section">
           <h3 class="pub-section-title">Journal Publications</h3>
           <div class="pub-grid" role="list">
+            
             <div class="pub-card" role="listitem">
               <div class="pub-badge">J.1</div>
-              <div class="pub-title">Advanced Neural Network Architectures for Tomato Leaf Disease Diagnosis in Precision Agriculture</div>
-              <div class="pub-meta">Discover Sustainability (Q2 Journal) — S. Kant, H. Ghosh, I. S. Rahat, M. M. R. Emon, <strong>M. J. Mashrafi</strong>, M. A. A. Tanzin, S. N. Mohanty</div>
+              <div class="pub-title">Earth System Intelligence Framework for Solar Resource Assessment and Coastal Energy Planning</div>
+              <div class="pub-meta">Earth Systems and Environment (IF: 5.0) — Q1 Journal • Published 2026</div>
               <div class="pub-links">
-                <a href="https://link.springer.com/article/10.1007/s43621-025-01149-1" target="_blank">DOI</a>
+                <a href="https://doi.org/10.1007/s41748-026-01323-z" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
               <div class="pub-badge">J.2</div>
-              <div class="pub-title">Exploring Artificial Intelligence for Scalable and Interpretable Flood Risk Forecasting in Rajshahi, Bangladesh</div>
-              <div class="pub-meta">Earth Systems and Environment — H. A. Alif, <strong>M. J. Mashrafi</strong>, M. Elhag, S. Purohit</div>
+              <div class="pub-title">Artificial Intelligence-Driven Rainfall Forecasting and GIS-Based Flood Risk Mapping for Climate-Resilient Infrastructure in Bangladesh</div>
+              <div class="pub-meta">Earth Systems and Environment (IF: 5.0) — Q1 Journal • Published 2025</div>
               <div class="pub-links">
-                <a href="https://docs.google.com/document/d/1jHEscLZ1CZ0jhWQOsEQfREcLMguXl5Izpm2V8Vv8k-w/edit?usp=sharing" target="_blank">Abstract</a>
-                <span class="pub-status under-review">+</span>
+                <a href="https://doi.org/10.1007/s41748-025-00958-8" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
               <div class="pub-badge">J.3</div>
               <div class="pub-title">Machine Learning-Driven Rainfall Forecasting Model for Sustainable and Adaptive Infrastructure Planning</div>
-              <div class="pub-meta">Discover Sustainability — H. A. Alif, <strong>M. J. Mashrafi</strong>, U. Haldar, M. M. Rahman, M. A. Miah, M. Uddin, S. B. Yousuf, M. J. Hasan</div>
+              <div class="pub-meta">Discover Sustainability (IF: 5.2) — Q1 Journal • Published 2026</div>
               <div class="pub-links">
-                <a href="https://docs.google.com/document/d/1_3pXNZpMR0dT8EoYZP7v9x5b2QB30bza0HWt5aOPXTo/edit?usp=sharing" target="_blank">Abstract</a>
-                <span class="pub-status under-review">+</span>
+                <a href="https://doi.org/10.1007/s43621-026-02699-8" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
               <div class="pub-badge">J.4</div>
-              <div class="pub-title">AI-Driven Rainfall Forecasting and GIS-Based Flood Risk Mapping for Climate-Resilient Infrastructure in Bangladesh</div>
-              <div class="pub-meta">Geo: Geography and Environment — H. A. Alif, <strong>M. J. Mashrafi</strong>, M. Elhag, S. Purohit</div>
+              <div class="pub-title">Risk-Informed Flood Management Under Climate Variability: A Hybrid Temporal–Ensemble Artificial Intelligence Framework</div>
+              <div class="pub-meta">Bulletin of Atmospheric Science and Technology — Q2 Journal • Published 2026</div>
               <div class="pub-links">
-                <a href="https://docs.google.com/document/d/1puPd0UTVMWCi2g_XUgoWtu6nj75x7IsKpqAlTfXegm8/edit?usp=sharing" target="_blank">Abstract</a>
-                <span class="pub-status under-review">+</span>
+                <a href="https://doi.org/10.1007/s42865-026-00126-4" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
               <div class="pub-badge">J.5</div>
-              <div class="pub-title">Integrated Modeling of Long-Term Warming in Bangladesh via Statistical, ML, Deep Learning, and GIS Analyses</div>
-              <div class="pub-meta">Earth System — H. A. Alif, <strong>M. J. Mashrafi</strong>, M. Almazroui, R. Chakrabortty, T. Ali, S. Hussain, M. Elhag</div>
+              <div class="pub-title">Seasonality and Wind Stilling in a Changing Coastal Climate: Machine Learning Insights from a Multi-Decadal Analysis in Bangladesh</div>
+              <div class="pub-meta">Mediterranean Geoscience Reviews — Q2 Journal • Published 2026</div>
               <div class="pub-links">
-                <a href="https://docs.google.com/document/d/1mkwvC01q0-AaahbJz92YLB-_UrLHqQyklCABux6rxwI/edit?usp=sharing" target="_blank">Abstract</a>
-                <span class="pub-status under-review">+</span>
+                <a href="https://doi.org/10.1007/s42990-026-00253-2" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
               <div class="pub-badge">J.6</div>
-              <div class="pub-title">Long-Term ML Assessment of Wind Energy Potential for Sustainable Power Planning in Bangladesh</div>
-              <div class="pub-meta">Heliyon — H. A. Alif, <strong>M. J. Mashrafi</strong></div>
+              <div class="pub-title">Advanced Neural Network Architectures for Tomato Leaf Disease Diagnosis</div>
+              <div class="pub-meta">Discover Sustainability (IF: 5.2) — Q1 Journal • Published Dec 2024</div>
               <div class="pub-links">
-                <a href="https://docs.google.com/document/d/14-v1dyVXQUpfmQkv9aISbPboLyUzF91hg_D4m-CgGIY/edit?usp=sharing" target="_blank">Abstract</a>
-                <span class="pub-status under-review">+</span>
+                <a href="https://doi.org/10.1007/s43621-025-01149-1" target="_blank">DOI</a>
               </div>
             </div>
+
           </div>
         </div>
 
-        <!-- Conference Publications -->
+        <!-- Under Peer Review Section -->
+        <div class="pub-section">
+          <h3 class="pub-section-title">Under Peer Review</h3>
+          <div class="pub-grid" role="list">
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">R.1</div>
+              <div class="pub-title">Half-Century Wind Resource Assessment and Energy Yield Mapping of Bangladesh Using Hybrid Spatio-Temporal Machine Learning</div>
+              <div class="pub-meta">International Journal of Climatology (IF: 3.2) — Q1 Journal • Under Peer Review</div>
+              <div class="pub-links">
+                <span class="pub-status under-review">+</span>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">R.2</div>
+              <div class="pub-title">ACREP: Agro-Climatic Risk Estimation via Physics-Informed Temporal Embeddings for Crop Protection in Cyclone-Prone Regions</div>
+              <div class="pub-meta">Scientific Reports (IF: 4.9) — Q1 Journal • Under Peer Review</div>
+              <div class="pub-links">
+                <span class="pub-status under-review">+</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+       <!-- Conference Publications -->
         <div class="pub-section">
           <h3 class="pub-section-title">Conference Publications</h3>
           <div class="pub-grid" role="list">
+            
             <div class="pub-card" role="listitem">
               <div class="pub-badge">C.1</div>
+              <div class="pub-title">Challenging Federated Learning for Drug–Gene Interaction Prediction: A Comparative Study of FedAvg and FedProx Feasibility</div>
+              <div class="pub-meta">ICIDCA 2025, IEEE, Coimbatore, India</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/ICIDCA66325.2025.11280589" target="_blank">DOI</a>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.2</div>
+              <div class="pub-title">Constructive Hypergraph Network with Adaptive Negative Sampling for Accurate Discovery and Risk Calibration of Low-Frequency Drug–Drug Interactions</div>
+              <div class="pub-meta">ICICNCT 2025, IEEE, Bidar, India</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/ICICNCT66124.2025.11232943" target="_blank">DOI</a>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.3</div>
+              <div class="pub-title">Federated vs. Centralized GCNs for Privacy-Preserving Drug–Gene Interaction Prediction</div>
+              <div class="pub-meta">ICIDCA 2025, IEEE, Coimbatore, India</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/ICIDCA66325.2025.11280352" target="_blank">DOI</a>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.4</div>
               <div class="pub-title">Comparative Machine Learning Framework for Rainfall Forecasting and Agricultural Loss Estimation</div>
-              <div class="pub-meta">CMSS 2025, IEEE — H. A. Alif, <strong>M. J. Mashrafi</strong>, M. Uddin, J. Ahmed, F. Faiyaz, S. Selim</div>
+              <div class="pub-meta">CMSS 2025, IEEE</div>
               <div class="pub-links">
                 <a href="https://doi.org/10.1109/CMSS66566.2025.11182335" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
-              <div class="pub-badge">C.2</div>
+              <div class="pub-badge">C.5</div>
               <div class="pub-title">Forecasting Literacy Development in Bangladesh: A Comparative Study of Machine Learning and Hybrid Approaches</div>
-              <div class="pub-meta">ECCE 2025, IEEE — M. A. A. Tanzin, <strong>M. J. Mashrafi</strong>, M. I. Hossain</div>
+              <div class="pub-meta">ECCE 2025, IEEE</div>
               <div class="pub-links">
                 <a href="https://doi.org/10.1109/ECCE64574.2025.11014044" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
-              <div class="pub-badge">C.3</div>
+              <div class="pub-badge">C.6</div>
               <div class="pub-title">PhishVQC: Optimizing Phishing URL Detection with Correlation-Based Feature Selection and Variational Quantum Classifier</div>
-              <div class="pub-meta">ISACC 2025, IEEE — M. F. Shahriyar, G. Tanbhir, A. M. Raihan Chy, M. A. A. Tanzin, <strong>M. J. Mashrafi</strong></div>
+              <div class="pub-meta">ISACC 2025, IEEE</div>
               <div class="pub-links">
                 <a href="https://doi.org/10.1109/ISACC65211.2025.10969366" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
-              <div class="pub-badge">C.4</div>
+              <div class="pub-badge">C.7</div>
               <div class="pub-title">Hybrid CNN–Random Forest Model for Predicting Water Level Fluctuations in Kaptai Reservoir</div>
-              <div class="pub-meta">ECCE 2025, IEEE — A. Sarkar, M. F. Shahriyar, A. M. Raihan Chy, M. A. A. Tanzin, <strong>M. J. Mashrafi</strong>, A. Fahim</div>
+              <div class="pub-meta">ECCE 2025, IEEE</div>
               <div class="pub-links">
                 <a href="https://doi.org/10.1109/ECCE64574.2025.11013997" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
-              <div class="pub-badge">C.5</div>
+              <div class="pub-badge">C.8</div>
               <div class="pub-title">Unsupervised Climate Anomaly Detection with Isolation Forest and One-Class SVM</div>
-              <div class="pub-meta">ICISC 2025, IEEE — H. A. Alif, A. D. Nath, <strong>M. J. Mashrafi</strong>, U. F. Lamia, S. R. Islam, S. S. Oishe</div>
+              <div class="pub-meta">ICISC 2025, IEEE</div>
               <div class="pub-links">
                 <a href="https://doi.org/10.1109/ICISC65841.2025.11188374" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
-              <div class="pub-badge">C.6</div>
-              <div class="pub-title">Challenging Federated Learning for DrugGene Interaction Prediction: A Comparative Study of FedAvg and FedProx Feasibility</div>
-              <div class="pub-meta">ICIDCA 2025, IEEE, Coimbatore, India — <strong>M. J. Mashrafi</strong>, M. M. Rahman, H. A. Alif, M. A. Miah, U. Haldar, M. H. Hasan</div>
-              <div class="pub-links">
-                <a href="https://drive.google.com/file/d/11RRgI3pjFcZfFhJhIWSJUsLp7hdJYd6R/view?usp=sharing" target="_blank">Certificate</a>
-                <span class="pub-status presented">*</span>
-              </div>
-            </div>
-
-            <div class="pub-card" role="listitem">
-              <div class="pub-badge">C.7</div>
-              <div class="pub-title">Federated vs. Centralized GCNs for Privacy-Preserving DrugGene Interaction Prediction</div>
-              <div class="pub-meta">ICIDCA 2025, IEEE, Coimbatore, India — <strong>M. J. Mashrafi</strong>, U. Haldar, H. A. Alif, L. Hasan, M. Uddin, M. M. Rahman</div>
-              <div class="pub-links">
-                <a href="https://drive.google.com/file/d/1yev5hGkqsXYjkNKVnFxCaUsKrnyC3vNE/view?usp=sharing" target="_blank">Certificate</a>
-                <span class="pub-status presented">*</span>
-              </div>
-            </div>
-
-            <div class="pub-card" role="listitem">
-              <div class="pub-badge">C.8</div>
-              <div class="pub-title">Evaluating LLMs in Higher Education: A SEM-Based Comparison of ChatGPT and DeepSeek Using the IS Success Model</div>
-              <div class="pub-meta">ASIANCON 2025, Pune, India — H. A. Alif, <strong>M. J. Mashrafi</strong>, S. R. Islam, A. Fahim, A. D. Nath, J. Ahmed</div>
-              <div class="pub-links">
-                <a href="https://drive.google.com/file/d/17p9-rhjL-biEDz5RVH4JPx8vJ4osHzBO/view?usp=sharing" target="_blank">Certificate</a>
-                <span class="pub-status presented">*</span>
-              </div>
-            </div>
-
-            <div class="pub-card" role="listitem">
               <div class="pub-badge">C.9</div>
-              <div class="pub-title">Explainable Machine Learning for Preoperative Prediction of Tumor Focality in Thyroid Cancer Using Lifestyle and Clinical Data</div>
-              <div class="pub-meta">COMPUTINGCON 2025, Pune, India — H. A. Alif, <strong>M. J. Mashrafi</strong>, S. Selim, U. Haldar, A. Ullah, R. Das</div>
+              <div class="pub-title">Evaluating LLMs in Higher Education: A SEM-Based Comparison of ChatGPT and DeepSeek Using the IS Success Model</div>
+              <div class="pub-meta">ASIANCON 2025, IEEE, Pune, India</div>
               <div class="pub-links">
-                <a href="https://drive.google.com/file/d/1_wDZB3N_xAQNVZXA4hvt2LvUuTw7KMDc/view?usp=sharing" target="_blank">Certificate</a>
-                <span class="pub-status presented">*</span>
+                <a href="https://doi.org/10.1109/ASIANCON66527.2025.11281210" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
               <div class="pub-badge">C.10</div>
-              <div class="pub-title">Unsupervised Machine Learning for Climate Surveillance: Comparative Temperature Anomaly Detection in Northwestern Bangladesh</div>
-              <div class="pub-meta">ICICIS 2025, Pune, India — H. A. Alif, S. Selim, <strong>M. J. Mashrafi</strong>, A. Ullah, U. Haldar, M. M. Rahman</div>
+              <div class="pub-title">Adaptive Ensemble Learning with Dynamic Weighting for Regional Temperature Extremes Detection Using Climate Teleconnections in Australia</div>
+              <div class="pub-meta">ICCES 2025, IEEE, Coimbatore, India</div>
               <div class="pub-links">
-                <a href="https://docs.google.com/document/d/17VsCnRFlP66oTxFuKJ5CtqjQI8MdM-uF/edit?usp=sharing&ouid=102072525972974652617&rtpof=true&sd=true" target="_blank">Certificate</a>
-                <span class="pub-status presented">*</span>
+                <a href="https://ieeexplore.ieee.org/document/11337026" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
               <div class="pub-badge">C.11</div>
-              <div class="pub-title">Constructive Hypergraph Network with Adaptive Negative Sampling for Accurate Discovery and Risk Calibration of Low-Frequency Drug–Drug Interactions</div>
-              <div class="pub-meta">ICICNCT 2026, Bidar, India — <strong>M. J. Mashrafi</strong>, H. A. Alif, M. Uddin, S. Selim, U. Haldar, M. B. Tabassum</div>
+              <div class="pub-title">Causality-Informed XGBoost Framework for Attribution of Temperature Extremes in Remote Maritime Climates Using Climate Oscillation Patterns in Australia</div>
+              <div class="pub-meta">ICMNWC 2025, IEEE, India</div>
               <div class="pub-links">
-                <a href="https://drive.google.com/file/d/114izVgjrsXyNhsLpqVDIBZQ9QnvqQJAV/view?usp=sharing" target="_blank">Certificate</a>
-                <span class="pub-status presented">*</span>
+                <a href="https://doi.org/10.1109/ICMNWC66779.2025.11354315" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
               <div class="pub-badge">C.12</div>
-              <div class="pub-title">Adaptive Ensemble Learning with Dynamic Weighting for Regional Temperature Extremes Detection Using Climate Teleconnections in Australia</div>
-              <div class="pub-meta">ICCES 2025, Coimbatore, India — <strong>M. J. Mashrafi</strong>, H. A. Alif, A. Biswas, N. Majumder, F. A. Romit, I. U. Alam</div>
+              <div class="pub-title">Unsupervised Machine Learning for Climate Surveillance: Comparative Temperature Anomaly Detection in Northwestern Bangladesh</div>
+              <div class="pub-meta">ICICIS 2025, IEEE, Pune, India</div>
               <div class="pub-links">
-                <a href="#" target="_blank">Certificate</a>
-                <span class="pub-status presented">*</span>
+                <a href="https://ieeexplore.ieee.org/document/11371242" target="_blank">DOI</a>
               </div>
             </div>
 
             <div class="pub-card" role="listitem">
               <div class="pub-badge">C.13</div>
-              <div class="pub-title">Causality-Informed XGBoost Framework for Attribution of Temperature Extremes in Remote Maritime Climates Using Climate Oscillation Patterns in Australia</div>
-              <div class="pub-meta">ICIIET 2025, India — <strong>M. J. Mashrafi</strong>, V. Debnath, H. A. Alif, Z. B. Sajid, R. Tajrin, R. N. Tasin</div>
+              <div class="pub-title">Machine Learning-Driven Thermal Zonation Framework for Urban Heat Island Assessment Using Landsat 9 Thermal Infrared Data: A Case Study of Chennai Metropolitan Region</div>
+              <div class="pub-meta">Procedia Computer Science, 2025</div>
               <div class="pub-links">
-                <a href="#" target="_blank">Certificate</a>
-                <span class="pub-status presented">*</span>
+                <a href="https://doi.org/10.1016/j.procs.2026.05.159" target="_blank">DOI</a>
               </div>
             </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.14</div>
+              <div class="pub-title">Climate Pattern Shift Index (CPSI): A Machine Learning-Based Metric for Analysing Temporal Instability in Annual Temperature Profiles</div>
+              <div class="pub-meta">Procedia Computer Science, 2025</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1016/j.procs.2026.05.156" target="_blank">DOI</a>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.15</div>
+              <div class="pub-title">Explainable Machine Learning for Preoperative Prediction of Tumor Focality in Thyroid Cancer Using Lifestyle and Clinical Examination Data</div>
+              <div class="pub-meta">COMPUTINGCON 2025, IEEE, Talegaon, India</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/COMPUTINGCON64838.2025.11378288" target="_blank">DOI</a>
+              </div>
+            </div>
+
+            <div class="pub-card" role="listitem">
+              <div class="pub-badge">C.16</div>
+              <div class="pub-title">Cross-Domain AI Fusion: Integrating Smart Grid Environmental Signals with Diabetes Risk Prediction</div>
+              <div class="pub-meta">ICSCSS 2025, IEEE, Coimbatore, India</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/ICSCSS64956.2025.11500630" target="_blank">DOI</a>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
-    </section>
-
     <!-- CONTACT -->
     <section id="contact" class="section" aria-labelledby="contactTitle">
       <div class="container">
@@ -1913,7 +1975,7 @@
             <ul style="list-style:none;padding-left:0;color:var(--muted);font-weight:600;line-height:1.8">
               <li><a href="https://scholar.google.com/citations?user=chPlK94AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a></li>
               <li><a href="https://drive.google.com/file/d/18sO4GU8pgxscjt4gtzJ56O7Vb1n-sE7X/view?usp=sharing" target="_blank"><i class="fas fa-file-pdf"></i> Download CV</a></li>
-              <li><a href="tel:+8801751168967"><i class="fas fa-phone"></i> +8801751168967</a></li>
+              <li><a href="tel:+60 11-3514 0447"><i class="fas fa-phone"></i> +60 11-3514 0447</a></li>
             </ul>
           </div>
         </div>
@@ -1942,45 +2004,6 @@
   </div>
 
   <script>
-/* Mobile Hero layout fix */
-@media (max-width: 768px) {
-  /* Stack hero-left and hero-right vertically */
-  .hero-inner {
-    display: flex;
-    flex-direction: column; /* top-to-bottom */
-    align-items: center;    /* center content horizontally */
-  }
-
-  /* Ensure profile image section comes first */
-  .hero-left {
-    order: 0;
-    width: 100%;            /* full width */
-    text-align: center;     /* center text and buttons */
-    margin-bottom: 20px;    /* space below image */
-  }
-
-  .hero-left .profile-wrap img {
-    width: 150px;           /* adjust size */
-    height: 150px;
-    border-radius: 50%;     /* make it circular */
-    object-fit: cover;
-  }
-
-  /* Summary section below the image */
-  .hero-right {
-    order: 1;
-    width: 100%;
-    text-align: center;     /* center summary content */
-  }
-
-  /* Center buttons and name */
-  .hero-left .hero-name h1,
-  .hero-left .role,
-  .hero-cta {
-    text-align: center;
-  }
-}
-
     // Thesis abstract toggle
     const toggleThesis = document.getElementById('toggleThesis');
     const thesisAbstract = document.getElementById('thesisAbstract');
@@ -2064,22 +2087,51 @@
       }
     });
 
-    // Close mobile menu when resizing to desktop
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 1060) {
-        mobileMenu.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        mobileMenu.classList.toggle('active');
         const icon = menuToggle.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('fa-bars');
+          icon.classList.toggle('fa-times');
+        }
+      });
+    }
+  // 👇 Add this block here
+  document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+
+      const icon = menuToggle.querySelector('i');
+      if (icon) {
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
+      }
+    });
+  });
+
+
+    // Close mobile menu when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1060 && mobileMenu) {
+        mobileMenu.classList.remove('active');
+        if (menuToggle) {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          const icon = menuToggle.querySelector('i');
+          if (icon) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        }
       }
     });
   </script>
 </body>
 </html>
-
-
-
-
-
-
