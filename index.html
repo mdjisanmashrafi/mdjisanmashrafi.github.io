@@ -19,6 +19,7 @@
 :root[data-theme=dark]{--bg:#121518;--card:#181c20;--fg:#e8e9e6;--mu:#9aa1a8;--rule:#2a2f34;--sf:#1d2227;--ac:#5cc4b4;--ac2:#8bdccf;--tint:#173330;--btn:#0b1412;--sh:none;--shh:0 6px 18px rgba(0,0,0,.4);color-scheme:dark}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#121518;--card:#181c20;--fg:#e8e9e6;--mu:#9aa1a8;--rule:#2a2f34;--sf:#1d2227;--ac:#5cc4b4;--ac2:#8bdccf;--tint:#173330;--btn:#0b1412;--sh:none;--shh:0 6px 18px rgba(0,0,0,.4);color-scheme:dark}}
 *{box-sizing:border-box;margin:0}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:64px}
 body{font:15px/1.55 var(--sans);background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased}
 a{color:var(--ac);text-underline-offset:3px}a:hover{color:var(--ac2)}
@@ -34,37 +35,8 @@ nav ul{display:flex;gap:16px;list-style:none;padding:0}
 nav a{font-size:13.5px;color:var(--mu);text-decoration:none;padding:5px 0;border-bottom:2px solid transparent;white-space:nowrap}
 nav a:hover{color:var(--fg)}nav a.act{color:var(--fg);border-color:var(--ac)}
 .ib{background:none;border:1px solid var(--rule);color:var(--fg);min-width:32px;height:32px;border-radius:6px;cursor:pointer;font:inherit;font-size:13px;display:inline-flex;align-items:center;justify-content:center;transition:background .15s}
-.ib:hover{background:var(--sf)}
-#theme{padding:0 10px}
-
-#menu{
-  display:none;
-  touch-action:manipulation;
-  -webkit-tap-highlight-color:transparent;
-}
-
-#top{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:100;
-  width:44px;
-  height:44px;
-  background:var(--card);
-  box-shadow:var(--shh);
-  border:1px solid var(--rule);
-  border-radius:50%;
-  font-size:21px;
-  cursor:pointer;
-  touch-action:manipulation;
-  -webkit-tap-highlight-color:transparent;
-}
-
-/* Ensure hidden buttons are actually hidden */
-#top[hidden]{
-  display:none !important;
-}
-
+.ib:hover{background:var(--sf)}#theme{padding:0 10px}#menu{display:none}
+#top{position:fixed;right:18px;bottom:18px;background:var(--card);z-index:40;box-shadow:var(--shh)}
 /* hero */
 .hero{padding:28px 0 26px}
 .hero-in{display:grid;grid-template-columns:1fr 200px;gap:40px;align-items:center}
@@ -158,82 +130,8 @@ details summary{cursor:pointer;color:var(--ac);font-size:13px;margin-top:8px}det
 .ct{display:grid;grid-template-columns:1fr 1fr;gap:20px}.ct p{font-size:14px}
 .foot{padding:20px 24px;color:var(--mu);font-size:12.5px;border-top:1px solid var(--rule)}
 @media(max-width:980px){.sk .card:last-child{grid-column:auto}.pg,.sk,.hg,.cg{grid-template-columns:repeat(2,1fr)}.nxg{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:repeat(2,1fr)}}
-
-@media(max-width:860px){
-
-  #menu{
-    display:inline-flex;
-    position:relative;
-    z-index:102;
-    min-width:42px;
-    min-height:42px;
-    font-size:19px;
-    cursor:pointer;
-    touch-action:manipulation;
-  }
-
-  nav{
-    display:none;
-    position:absolute;
-    top:52px;
-    left:0;
-    right:0;
-    z-index:101;
-    background:var(--bg);
-    border-bottom:1px solid var(--rule);
-    box-shadow:var(--shh);
-  }
-
-  nav.open{
-    display:block !important;
-  }
-
-  nav ul{
-    display:flex;
-    flex-direction:column;
-    gap:0;
-    padding:8px 24px 14px;
-  }
-
-  nav a{
-    display:block;
-    padding:12px 0;
-    font-size:15px;
-    border-bottom:1px solid var(--rule);
-  }
-
-  nav li:last-child a{
-    border-bottom:0;
-  }
-
-  .hero-in{
-    grid-template-columns:1fr;
-  }
-
-  .ph{
-    order:-1;
-    width:120px;
-    height:146px;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-    gap:10px;
-  }
-
-  h2{
-    position:static;
-  }
-
-  .two,.rg,.xp,.sv,.ct{
-    grid-template-columns:1fr;
-  }
-
-  .rg3{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
+@media(max-width:860px){#menu{display:inline-flex}nav{display:none;position:absolute;top:52px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--rule)}nav.open{display:block}nav ul{flex-direction:column;gap:0;padding:6px 24px}nav a{display:block;padding:9px 0}
+.hero-in{grid-template-columns:1fr}.ph{order:-1;width:120px;height:146px}.grid{grid-template-columns:1fr;gap:10px}h2{position:static}.two,.rg,.xp,.sv,.ct{grid-template-columns:1fr}.rg3{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.pg,.sk,.hg,.cg,.nxg,.cols,.rg3{grid-template-columns:1fr}.pc.w2{grid-column:auto}.row{grid-template-columns:1fr;gap:0}.rev{flex-direction:column;gap:2px}.stats span{padding:6px 12px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -265,15 +163,7 @@ details summary{cursor:pointer;color:var(--ac);font-size:13px;margin-top:8px}det
 <nav id="nav" aria-label="Primary"><ul>
 <li><a href="#about">About</a></li><li><a href="#research">Research</a></li><li><a href="#skills">Skills</a></li><li><a href="#publications">Publications</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#entrepreneurial">Entrepreneurial</a></li><li><a href="#honors">Honors</a></li><li><a href="#service">Service</a></li><li><a href="#contact">Contact</a></li>
 </ul></nav>
-<button
-  id="menu"
-  class="ib"
-  type="button"
-  aria-expanded="false"
-  aria-controls="nav"
-  aria-label="Open navigation menu">
-  &#9776;
-</button>
+<button id="menu" class="ib" aria-expanded="false" aria-controls="nav" aria-label="Menu">&#9776;</button>
 </div></header>
 
 <main id="main">
@@ -387,15 +277,7 @@ details summary{cursor:pointer;color:var(--ac);font-size:13px;margin-top:8px}det
 </div></div></section>
 </main>
 <footer class="wrap foot">© 2026 Md. Jisan Mashrafi. All rights reserved.</footer>
-<button
-  id="top"
-  class="ib"
-  type="button"
-  aria-label="Back to top"
-  title="Back to top"
-  hidden>
-  &uarr;
-</button>
+<button id="top" class="ib" aria-label="Back to top" hidden>&uarr;</button>
 
 <script>
 (function(){
@@ -496,154 +378,26 @@ $("#certs").innerHTML=C.map(function(c,i){return '<a href="'+c[1]+'" target="_bl
 
 var root=document.documentElement;
 try{var t=localStorage.getItem("theme");if(t)root.dataset.theme=t}catch(e){}
-$("#theme").addEventListener("click",function(){
+var themeBtn=$("#theme");
+if(themeBtn){themeBtn.addEventListener("click",function(){
  var dark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
- root.dataset.theme=dark?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}});
-
-/* Mobile navigation */
-var nav = $("#nav");
-var mb = $("#menu");
-
-function closeM(){
-  nav.classList.remove("open");
-  mb.setAttribute("aria-expanded","false");
-  mb.setAttribute("aria-label","Open navigation menu");
-}
-
-function toggleM(){
-  var isOpen = nav.classList.toggle("open");
-
-  mb.setAttribute("aria-expanded",String(isOpen));
-  mb.setAttribute(
-    "aria-label",
-    isOpen ? "Close navigation menu" : "Open navigation menu"
-  );
-}
-
-/* Toggle menu */
-mb.addEventListener("click",function(e){
-  e.preventDefault();
-  toggleM();
-});
-
-/* Close menu after selecting a navigation link */
-nav.addEventListener("click",function(e){
-  var link = e.target.closest("a");
-
-  if(link){
-    closeM();
-  }
-});
-
-/* Close menu with Escape */
-document.addEventListener("keydown",function(e){
-  if(e.key === "Escape"){
-    closeM();
-  }
-});
-
-/* Close menu when switching to desktop layout */
-window.addEventListener("resize",function(){
-  if(window.innerWidth > 860){
-    closeM();
-  }
-});
-
-/* Active navigation link */
-var links = [].slice.call(nav.querySelectorAll("a"));
-
+ root.dataset.theme=dark?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}});}
+var nav=$("#nav"),mb=$("#menu");
+function closeM(){nav.classList.remove("open");mb.setAttribute("aria-expanded","false")}
+mb.addEventListener("click",function(){var o=nav.classList.toggle("open");mb.setAttribute("aria-expanded",String(o))});
+document.addEventListener("click",function(e){if(nav.classList.contains("open")&&!nav.contains(e.target)&&!mb.contains(e.target))closeM()});
+nav.addEventListener("click",function(e){if(e.target.tagName==="A")closeM()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeM()});
+var links=[].slice.call(nav.querySelectorAll("a"));
 if("IntersectionObserver" in window){
-
-  var io = new IntersectionObserver(function(entries){
-
-    entries.forEach(function(entry){
-
-      if(entry.isIntersecting){
-
-        var id = entry.target.id === "interests"
-          ? "about"
-          : entry.target.id;
-
-        links.forEach(function(link){
-
-          link.classList.toggle(
-            "act",
-            link.getAttribute("href") === "#" + id
-          );
-
-        });
-
-      }
-
-    });
-
-  },{
-    rootMargin:"-40% 0px -55% 0px"
-  });
-
-  document.querySelectorAll("main section[id]").forEach(function(section){
-    io.observe(section);
-  });
-
-}
-
-/* Back-to-top button */
-var topBtn = $("#top");
-
-function updateTopButton(){
-
-  var currentScroll =
-    window.scrollY ||
-    document.documentElement.scrollTop ||
-    document.body.scrollTop ||
-    0;
-
-  topBtn.hidden = currentScroll < 400;
-
-}
-
-/* Update button visibility */
-window.addEventListener("scroll",updateTopButton,{passive:true});
-window.addEventListener("pageshow",updateTopButton);
-window.addEventListener("load",updateTopButton);
-
-/* Back-to-top click */
-function goToTop(e){
-
-  if(e){
-    e.preventDefault();
-  }
-
-  closeM();
-
-  /* Modern browsers */
-  try{
-
-    window.scrollTo({
-      top:0,
-      left:0,
-      behavior:"smooth"
-    });
-
-  }catch(error){
-
-    /* Fallback for older mobile browsers */
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-
-  }
-
-  /* Additional fallback */
-  document.documentElement.scrollTop = 0;
-  document.body.scrollTop = 0;
-
-}
-
-topBtn.addEventListener("click",goToTop);
-
-/* Initial state */
-updateTopButton();
-
+ var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){
+  var id=en.target.id==="interests"?"about":en.target.id;
+  links.forEach(function(a){a.classList.toggle("act",a.getAttribute("href")==="#"+id)})}})},{rootMargin:"-40% 0px -55% 0px"});
+ document.querySelectorAll("main section[id]").forEach(function(s){io.observe(s)});}
+var topBtn=$("#top");
+addEventListener("scroll",function(){topBtn.hidden=scrollY<600},{passive:true});
+topBtn.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
+topBtn.hidden=window.scrollY<600;
 })();
 </script>
 </body>
