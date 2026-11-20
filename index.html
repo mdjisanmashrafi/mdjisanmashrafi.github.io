@@ -35,7 +35,8 @@ nav a{font-size:13.5px;color:var(--mu);text-decoration:none;padding:5px 0;border
 nav a:hover{color:var(--fg)}nav a.act{color:var(--fg);border-color:var(--ac)}
 .ib{background:none;border:1px solid var(--rule);color:var(--fg);min-width:32px;height:32px;border-radius:6px;cursor:pointer;font:inherit;font-size:13px;display:inline-flex;align-items:center;justify-content:center;transition:background .15s}
 .ib:hover{background:var(--sf)}#theme{padding:0 10px}#menu{display:none}
-#top{position:fixed;right:18px;bottom:18px;background:var(--card);z-index:40;box-shadow:var(--shh)}
+#top{position:fixed;right:18px;bottom:18px;background:var(--card);z-index:60;box-shadow:var(--shh);border:1px solid var(--rule);border-radius:6px;min-width:32px;height:32px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:16px}
+#top[hidden]{display:none}
 /* hero */
 .hero{padding:28px 0 26px}
 .hero-in{display:grid;grid-template-columns:1fr 200px;gap:40px;align-items:center}
@@ -162,7 +163,7 @@ details summary{cursor:pointer;color:var(--ac);font-size:13px;margin-top:8px}det
 <nav id="nav" aria-label="Primary"><ul>
 <li><a href="#about">About</a></li><li><a href="#research">Research</a></li><li><a href="#skills">Skills</a></li><li><a href="#publications">Publications</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#entrepreneurial">Entrepreneurial</a></li><li><a href="#honors">Honors</a></li><li><a href="#service">Service</a></li><li><a href="#contact">Contact</a></li>
 </ul></nav>
-<button id="menu" class="ib" aria-expanded="false" aria-controls="nav" aria-label="Menu">&#9776;</button>
+<button id="menu" class="ib" aria-expanded="false" aria-controls="nav" aria-label="Menu">☰</button>
 </div></header>
 
 <main id="main">
@@ -276,13 +277,13 @@ details summary{cursor:pointer;color:var(--ac);font-size:13px;margin-top:8px}det
 </div></div></section>
 </main>
 <footer class="wrap foot">© 2026 Md. Jisan Mashrafi. All rights reserved.</footer>
-<button id="top" class="ib" aria-label="Back to top" hidden>&uarr;</button>
+<button id="top" class="ib" aria-label="Back to top" hidden>↑</button>
 
 <script>
 (function(){
 "use strict";
 var $=function(s){return document.querySelector(s)};
-function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
 function ext(u,t){return '<a href="'+u+'" target="_blank" rel="noopener noreferrer">'+t+'</a>'}
 function tags(a){return '<ul class="tags">'+a.map(function(t){return "<li>"+esc(t)+"</li>"}).join("")+"</ul>"}
 var D="https://doi.org/";
