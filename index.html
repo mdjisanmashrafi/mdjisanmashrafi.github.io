@@ -15,90 +15,155 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e6a5f'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Georgia'%3EJM%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Md. Jisan Mashrafi","jobTitle":"Graduate Research Assistant","affiliation":{"@type":"CollegeOrUniversity","name":"Universiti Teknologi Malaysia"},"url":"https://mdjisanmashrafi.github.io","sameAs":["https://github.com/mdjisanmashrafi","https://www.linkedin.com/in/md-jisan-mashrafi/","https://orcid.org/0009-0009-2640-586X","https://scholar.google.com/citations?user=chPlK94AAAAJ&hl=en"]}</script>
 <style>
-:root{--bg:#fbfbf9;--fg:#1d2023;--mu:#5d636a;--rule:#e3e3de;--sf:#f2f2ee;--ac:#0e6a5f;--ac2:#0a4f47;--btn:#fff;--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color-scheme:light}
-:root[data-theme=dark]{--bg:#14171a;--fg:#e8e9e6;--mu:#9aa1a8;--rule:#2b3035;--sf:#1c2024;--ac:#5cc4b4;--ac2:#8bdccf;--btn:#0b1412;color-scheme:dark}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14171a;--fg:#e8e9e6;--mu:#9aa1a8;--rule:#2b3035;--sf:#1c2024;--ac:#5cc4b4;--ac2:#8bdccf;--btn:#0b1412;color-scheme:dark}}
+:root{--bg:#fafaf8;--card:#fff;--fg:#1d2023;--mu:#5d636a;--rule:#e4e4df;--sf:#f1f1ed;--ac:#0e6a5f;--ac2:#0a4f47;--tint:#e6f1ef;--btn:#fff;--sh:0 1px 2px rgba(20,24,28,.05);--shh:0 6px 18px rgba(20,24,28,.09);--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color-scheme:light}
+:root[data-theme=dark]{--bg:#121518;--card:#181c20;--fg:#e8e9e6;--mu:#9aa1a8;--rule:#2a2f34;--sf:#1d2227;--ac:#5cc4b4;--ac2:#8bdccf;--tint:#173330;--btn:#0b1412;--sh:none;--shh:0 6px 18px rgba(0,0,0,.4);color-scheme:dark}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#121518;--card:#181c20;--fg:#e8e9e6;--mu:#9aa1a8;--rule:#2a2f34;--sf:#1d2227;--ac:#5cc4b4;--ac2:#8bdccf;--tint:#173330;--btn:#0b1412;--sh:none;--shh:0 6px 18px rgba(0,0,0,.4);color-scheme:dark}}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{font:16px/1.65 var(--sans);background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{font:15px/1.55 var(--sans);background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased}
 a{color:var(--ac);text-underline-offset:3px}a:hover{color:var(--ac2)}
 :focus-visible{outline:2px solid var(--ac);outline-offset:2px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+svg.i{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 .skip{position:absolute;left:-999px}.skip:focus{left:12px;top:8px;background:var(--bg);padding:8px;z-index:99}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .bar{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--rule)}
-.bar-in{display:flex;align-items:center;gap:16px;height:56px}
-.brand{font:500 18px var(--serif);color:var(--fg);text-decoration:none;margin-right:auto}
-nav ul{display:flex;gap:20px;list-style:none;padding:0}
-nav a{font-size:14px;color:var(--mu);text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.bar-in{display:flex;align-items:center;gap:14px;height:52px}
+.brand{font:500 17px var(--serif);color:var(--fg);text-decoration:none;margin-right:auto}
+nav ul{display:flex;gap:16px;list-style:none;padding:0}
+nav a{font-size:13.5px;color:var(--mu);text-decoration:none;padding:5px 0;border-bottom:2px solid transparent;white-space:nowrap}
 nav a:hover{color:var(--fg)}nav a.act{color:var(--fg);border-color:var(--ac)}
-.ib{background:none;border:1px solid var(--rule);color:var(--fg);min-width:34px;height:34px;border-radius:4px;cursor:pointer;font:inherit;font-size:14px}
-.ib:hover{background:var(--sf)}#theme{padding:0 10px;font-size:13px}#menu{display:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
-#top{position:fixed;right:20px;bottom:20px;background:var(--bg);z-index:1000;min-width:44px;min-height:44px;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
-#top[hidden]{display:none!important}
-.hero{padding:56px 0 48px}
-.hero-in{display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:start}
-h1{font:400 clamp(36px,5vw,52px)/1.08 var(--serif);letter-spacing:-.015em}
-.role{margin-top:12px;color:var(--mu)}
-.lede{margin-top:22px;font:400 21px/1.5 var(--serif);max-width:34em}
-.kw{margin-top:16px;color:var(--mu);font-size:14px;max-width:44em}
-.metrics{margin-top:22px;font-size:14px;color:var(--mu)}.metrics a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--rule)}.metrics b{font-weight:600}.metrics span{margin-left:8px}
-.links{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;font-size:15px}
-.btn{background:var(--ac);color:var(--btn);padding:8px 16px;border-radius:4px;text-decoration:none;font-weight:500}.btn:hover{background:var(--ac2);color:var(--btn)}
-.ph{width:280px;height:340px;border-radius:4px;overflow:hidden;background:var(--sf);border:1px solid var(--rule)}
+.ib{background:none;border:1px solid var(--rule);color:var(--fg);min-width:32px;height:32px;border-radius:6px;cursor:pointer;font:inherit;font-size:13px;display:inline-flex;align-items:center;justify-content:center;transition:background .15s}
+.ib:hover{background:var(--sf)}#theme{padding:0 10px}#menu{display:none}
+#top{position:fixed;right:18px;bottom:18px;background:var(--card);z-index:40;box-shadow:var(--shh)}
+/* hero */
+.hero{padding:28px 0 26px}
+.hero-in{display:grid;grid-template-columns:1fr 200px;gap:40px;align-items:center}
+h1{font:400 clamp(32px,4.6vw,44px)/1.1 var(--serif);letter-spacing:-.015em}
+.role{margin-top:6px;color:var(--mu);font-size:15px}
+.lede{margin-top:12px;font:400 18px/1.45 var(--serif);max-width:36em}
+.stats{margin-top:16px;display:inline-flex;border:1px solid var(--rule);border-radius:6px;background:var(--card);box-shadow:var(--sh);text-decoration:none;color:var(--fg)}
+.stats span{padding:6px 16px;display:flex;flex-direction:column;line-height:1.2;border-left:1px solid var(--rule)}.stats span:first-child{border:0}
+.stats b{font:500 20px var(--serif)}.stats small{font-size:11.5px;color:var(--mu)}
+.stats:hover{box-shadow:var(--shh);color:var(--fg)}
+.links{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.links a{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;text-decoration:none;border:1px solid var(--rule);background:var(--card);color:var(--fg);padding:5px 11px;border-radius:6px;transition:border-color .15s,box-shadow .15s}
+.links a:hover{border-color:var(--ac);color:var(--ac);box-shadow:var(--sh)}
+.links a.btn{background:var(--ac);border-color:var(--ac);color:var(--btn);font-weight:500}.links a.btn:hover{background:var(--ac2);color:var(--btn)}
+.ph{width:200px;height:244px;border-radius:8px;overflow:hidden;background:var(--sf);border:1px solid var(--rule);box-shadow:var(--sh)}
 .ph img{width:100%;height:100%;object-fit:cover}
-.ph.nophoto{display:grid;place-items:center}.ph.nophoto:after{content:"JM";font:400 72px var(--serif);color:var(--mu)}
-.hero-in>div{animation:in .6s ease both}
-@keyframes in{from{opacity:0;transform:translateY(8px)}}
-.sec{border-top:1px solid var(--rule);padding:48px 0}
-.grid{display:grid;grid-template-columns:200px 1fr;gap:40px}
-h2{font:500 15px/1.4 var(--sans);color:var(--mu);position:sticky;top:76px;align-self:start}
-.body{max-width:720px}.body p+p{margin-top:14px}
-.serif{font:500 22px/1.3 var(--serif)}
-.body h3.serif{margin:36px 0 12px}.body h3.serif:first-child{margin-top:0}
-.meta{color:var(--mu);font-size:14px}
-.ri div{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:230px 1fr;gap:16px}
-.ri dt{font:500 18px/1.35 var(--serif)}.ri dd{color:var(--mu);font-size:15px}
-.fig{margin:24px 0;padding:16px;border:1px solid var(--rule);border-radius:4px;background:var(--sf)}
-.fig svg{width:100%;height:auto;display:block}.fig figcaption{font-size:13px;color:var(--mu);margin-top:8px}
-.b rect{fill:var(--bg);stroke:var(--mu);stroke-width:1}.t{font:12px var(--sans);fill:var(--fg)}.t.s{fill:var(--mu);font-size:11px}
+.ph.nophoto{display:grid;place-items:center}.ph.nophoto:after{content:"JM";font:400 56px var(--serif);color:var(--mu)}
+.hero-in>div{animation:in .5s ease both}
+@keyframes in{from{opacity:0;transform:translateY(6px)}}
+/* sections */
+.sec{border-top:1px solid var(--rule);padding:30px 0}
+.grid{display:grid;grid-template-columns:140px 1fr;gap:28px}
+h2{font:600 13px/1.4 var(--sans);color:var(--ac);position:sticky;top:68px;align-self:start;letter-spacing:.01em}
+.body{min-width:0}
+.body p+p{margin-top:8px}
+h3{font:600 13px/1.3 var(--sans);color:var(--mu);margin:22px 0 8px}.body>h3:first-child{margin-top:0}
+.serif{font:500 19px/1.3 var(--serif);color:var(--fg)}
+.meta{color:var(--mu);font-size:13px}
+.two{display:grid;grid-template-columns:1.25fr 1fr;gap:28px}
+.tags{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:5px}
+.tags li{font-size:12.5px;border:1px solid var(--rule);background:var(--card);border-radius:4px;padding:1px 8px;color:var(--mu);line-height:1.6}
+.tags.ac li{background:var(--tint);border-color:transparent;color:var(--ac2)}
+:root[data-theme=dark] .tags.ac li{color:var(--ac)}
+.lead{font:400 17px/1.4 var(--serif);margin-bottom:8px}
+.qf{display:grid;grid-template-columns:72px 1fr;gap:5px 12px;font-size:13.5px}.qf dt{color:var(--mu)}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;box-shadow:var(--sh)}
+/* interests */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px}
+.cols h4{font:600 13px/1.3 var(--sans);margin-bottom:5px}
+/* research */
+.rg{display:grid;grid-template-columns:1fr 1.1fr;gap:20px;margin-top:10px;align-items:start}
+.rg ul.ob{padding:0;list-style:none;font-size:13.5px}.ob li{margin-top:6px;display:flex;gap:8px;align-items:flex-start}.ob li svg{color:var(--ac);margin-top:3px}
+.fig{padding:10px 12px}.fig svg{width:100%;height:auto;display:block}.fig figcaption{font-size:12px;color:var(--mu);margin-top:4px}
+.b rect{fill:var(--card);stroke:var(--mu);stroke-width:1}.t{font:11.5px var(--sans);fill:var(--fg)}.t.s{fill:var(--mu);font-size:10.5px}
 .l path{fill:none;stroke:var(--ac);stroke-width:1.2}.l .d{stroke-dasharray:4 3}
-.tags{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px;margin:16px 0}
-.tags li{font-size:13px;border:1px solid var(--rule);border-radius:3px;padding:2px 9px;color:var(--mu)}
-.st{display:block;color:var(--ac);font-size:14px;margin-top:4px}
-.tools{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;margin-bottom:12px}
-#chips{display:flex;gap:6px;flex-wrap:wrap}#chips button{font:inherit;font-size:14px;background:none;border:1px solid var(--rule);color:var(--mu);padding:4px 12px;border-radius:3px;cursor:pointer}
+.rg3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}.rg3 h4{font:600 12px var(--sans);color:var(--mu);margin-bottom:5px}
+details summary{cursor:pointer;color:var(--ac);font-size:13px;margin-top:8px}details p{margin-top:6px;font-size:13.5px;color:var(--mu)}
+.rev{margin-top:14px;display:flex;gap:12px;align-items:flex-start;border-left:3px solid var(--ac)}
+.rev b{font-weight:600}.rev .st{color:var(--ac);font-size:12.5px;white-space:nowrap}
+/* publications */
+.tools{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+#chips{display:flex;gap:5px;flex-wrap:wrap}#chips button{font:inherit;font-size:13px;background:none;border:1px solid var(--rule);color:var(--mu);padding:3px 11px;border-radius:5px;cursor:pointer}
 #chips button.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
-#q{font:inherit;font-size:14px;padding:5px 10px;border:1px solid var(--rule);border-radius:3px;background:var(--bg);color:var(--fg);min-width:220px}
+#q{font:inherit;font-size:13px;padding:4px 10px;border:1px solid var(--rule);border-radius:5px;background:var(--card);color:var(--fg);min-width:210px}
 .pubs{list-style:none;padding:0;margin-top:8px}
-.pubs li{display:grid;grid-template-columns:44px 1fr;gap:8px;padding:16px 0;border-top:1px solid var(--rule)}
+.pubs li{display:grid;grid-template-columns:38px 1fr;gap:6px;padding:9px 0;border-top:1px solid var(--rule)}
 .pubs li[hidden]{display:none}
-.pubs .id{font-size:13px;color:var(--mu);padding-top:3px}
-.pt{font:500 18px/1.35 var(--serif)}.pa{font-size:14px;color:var(--mu);margin-top:4px}.pa b{color:var(--fg);font-weight:600}
-.pv{font-size:14px;margin-top:4px}.pv i{font-style:italic}.pv .m{color:var(--mu)}
-.pb{display:inline-block;font-size:12px;border:1px solid var(--ac);color:var(--ac);border-radius:3px;padding:0 6px;margin-left:6px}
-.fa .pt{border-left:2px solid var(--ac);padding-left:10px;margin-left:-12px}
-.pr{padding:20px 0;border-top:1px solid var(--rule)}.pr.sm{padding:12px 0}
-.pr h4{font:500 20px/1.3 var(--serif)}.pr.sm h4{font-size:17px}
-.pr .meta{margin:2px 0 6px}.pr .links{margin-top:8px;font-size:14px;gap:6px 16px}
-details summary{cursor:pointer;color:var(--ac);font-size:14px;margin-top:8px}details p{margin-top:8px;font-size:15px}
-.row{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:14px 0;border-top:1px solid var(--rule)}
-.row .when{font-size:13px;color:var(--mu);padding-top:3px}.row p{margin-top:6px;font-size:15px}
-.plain{list-style:none;padding:0}.plain li{padding:6px 0;font-size:15px}
-.foot{padding:32px 24px;color:var(--mu);font-size:13px;border-top:1px solid var(--rule)}
-@media(max-width:860px){#menu{display:flex;align-items:center;justify-content:center;position:relative;z-index:102;min-width:44px;min-height:44px;touch-action:manipulation}nav{display:none;position:absolute;top:56px;left:0;right:0;z-index:101;background:var(--bg);border-bottom:1px solid var(--rule);box-shadow:0 8px 18px rgba(0,0,0,.08)}nav.open{display:block}nav ul{flex-direction:column;gap:0;padding:8px 24px}nav a{display:block;padding:10px 0}
-.hero-in{grid-template-columns:1fr}.ph{order:-1;width:180px;height:220px}.grid{grid-template-columns:1fr;gap:16px}h2{position:static}.ri div{grid-template-columns:1fr;gap:2px}.row{grid-template-columns:1fr;gap:4px}.lede{font-size:19px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+.pubs .id{font-size:12px;color:var(--mu);padding-top:2px}
+.pt{font:500 15.5px/1.35 var(--serif)}.pa{font-size:12.5px;color:var(--mu);margin-top:2px;line-height:1.45}.pa b{color:var(--fg);font-weight:600}
+.pv{font-size:12.5px;margin-top:2px}.pv i{font-style:italic}.pv .m{color:var(--mu)}
+.pb{display:inline-block;font-size:11.5px;border:1px solid var(--ac);color:var(--ac);border-radius:3px;padding:0 5px;margin-left:5px}
+.fa .id{color:var(--ac);font-weight:600}
+#more{margin-top:8px;font:inherit;font-size:13px;color:var(--ac);background:none;border:1px solid var(--rule);border-radius:5px;padding:4px 12px;cursor:pointer}#more:hover{border-color:var(--ac)}
+/* projects */
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pc{display:flex;flex-direction:column;gap:5px;transition:box-shadow .2s,border-color .2s}.pc:hover{box-shadow:var(--shh);border-color:var(--ac)}
+.pc.fl{border-top:3px solid var(--ac)}.pc.w2{grid-column:span 2}
+.pc h4{font:500 16.5px/1.3 var(--serif)}.pc p{font-size:13.5px}
+.pc .tags{margin-top:2px}
+.pc .links{margin:auto 0 0;padding-top:4px;gap:6px}.pc .links a{font-size:12.5px;padding:2px 9px}
+/* timeline rows */
+.row{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:8px 0;border-top:1px solid var(--rule)}.row:first-of-type{border-top:0}
+.row .when{font-size:12.5px;color:var(--mu);padding-top:1px}.row p{font-size:13.5px;margin-top:2px;color:var(--mu)}
+.row b{font-weight:600}
+.xp{display:grid;grid-template-columns:1fr 1fr;gap:4px 32px}
+/* entrepreneurial */
+.nxg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:10px}
+.nxc{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.nxc img{width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--sf);display:block;transition:transform .3s}.nxc:hover img{transform:scale(1.03)}
+.nxc div{padding:10px 12px 12px;overflow:hidden}.nxc h4{font:500 15px var(--serif)}.nxc p{font-size:12.5px;color:var(--mu);margin:2px 0 4px;line-height:1.4}.nxc a{font-size:12.5px}
+.nxi{overflow:hidden;display:block}
+/* honors, certs */
+.hg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.hg .card{padding:10px 12px 10px 36px;position:relative}.hg .card>svg{position:absolute;left:12px;top:12px;color:var(--ac)}.hg b{font-weight:600;font-size:13.5px;display:block;line-height:1.35}.hg .meta{font-size:12px}
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.cg a{display:flex;gap:8px;align-items:flex-start;border:1px solid var(--rule);background:var(--card);border-radius:6px;padding:7px 10px;text-decoration:none;color:var(--fg);font-size:12.5px;line-height:1.35;transition:border-color .15s}.cg a:hover{border-color:var(--ac)}.cg a svg{color:var(--ac);margin-top:1px}.cg a span{display:flex;flex-direction:column}.cg small{color:var(--mu);font-size:11.5px}.ih{display:flex;align-items:center;gap:6px}.ih svg{color:var(--ac)}
+/* skills */
+.sk{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.sk .card{padding:10px 12px}.sk .card:last-child{grid-column:1/-1}.sk h4{font:600 13px/1.3 var(--sans);display:flex;gap:7px;align-items:center;margin-bottom:6px}.sk h4 svg{color:var(--ac)}
+/* service/contact */
+.sv{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:20px}.ct p{font-size:14px}
+.foot{padding:20px 24px;color:var(--mu);font-size:12.5px;border-top:1px solid var(--rule)}
+@media(max-width:980px){.sk .card:last-child{grid-column:auto}.pg,.sk,.hg,.cg{grid-template-columns:repeat(2,1fr)}.nxg{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){#menu{display:inline-flex}nav{display:none;position:absolute;top:52px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--rule)}nav.open{display:block}nav ul{flex-direction:column;gap:0;padding:6px 24px}nav a{display:block;padding:9px 0}
+.hero-in{grid-template-columns:1fr}.ph{order:-1;width:120px;height:146px}.grid{grid-template-columns:1fr;gap:10px}h2{position:static}.two,.rg,.xp,.sv,.ct{grid-template-columns:1fr}.rg3{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.pg,.sk,.hg,.cg,.nxg,.cols,.rg3{grid-template-columns:1fr}.pc.w2{grid-column:auto}.row{grid-template-columns:1fr;gap:0}.rev{flex-direction:column;gap:2px}.stats span{padding:6px 12px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+<symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 4v11m-4-4 4 4 4-4M5 20h14"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19a2 2 0 0 1 2-2h13"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-12-2 14"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+<symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.5-2 5.5-2 6 0M15 10h3m-3 3h3"/></symbol>
+<symbol id="i-ai" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="12" r="2"/><path d="m8 7 8 4M8 17l8-4"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5zM3 13l9 5 9-5"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+<symbol id="i-loop" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5M20 12a8 8 0 0 1-14 5l-2-2M4 20v-5h5"/></symbol>
+<symbol id="i-tool" viewBox="0 0 24 24"><path d="M14 6a4 4 0 0 0 5 5l-9 9a2 2 0 0 1-3-3l9-9a4 4 0 0 0-2-2z"/></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="m8.5 13-1.5 8 5-3 5 3-1.5-8"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4m0 1h12l-2 4 2 4H5"/></symbol>
+<symbol id="i-cap" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.500 6-3v-4.500"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.700 5.600 6.100.8-4.400 4.300 1 6.100L12 17l-5.400 2.800 1-6.100L3.200 9.400l6.100-.8z"/></symbol>
+<symbol id="i-cert" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM15 3v4h4M9 14l2 2 4-4"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+</defs></svg>
 <a class="skip" href="#main">Skip to content</a>
 <header class="bar"><div class="wrap bar-in">
 <a class="brand" href="#home">Md. Jisan Mashrafi</a>
 <nav id="nav" aria-label="Primary"><ul>
-<li><a href="#about">About</a></li><li><a href="#research">Research</a></li><li><a href="#publications">Publications</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#service">Service</a></li><li><a href="#honors">Honors</a></li><li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li><li><a href="#research">Research</a></li><li><a href="#skills">Skills</a></li><li><a href="#publications">Publications</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#entrepreneurial">Entrepreneurial</a></li><li><a href="#honors">Honors</a></li><li><a href="#service">Service</a></li><li><a href="#contact">Contact</a></li>
 </ul></nav>
-<button id="menu" class="ib" aria-expanded="false" aria-controls="nav" aria-label="Open navigation menu">&#9776;</button>
+<button id="theme" class="ib" aria-label="Toggle dark mode">Theme</button>
+<button id="menu" class="ib" aria-expanded="false" aria-controls="nav" aria-label="Menu">&#9776;</button>
 </div></header>
 
 <main id="main">
@@ -106,94 +171,112 @@ details summary{cursor:pointer;color:var(--ac);font-size:14px;margin-top:8px}det
 <div>
 <h1>Md. Jisan Mashrafi</h1>
 <p class="role">Graduate Research Assistant · MPhil Researcher in Artificial Intelligence<br>Universiti Teknologi Malaysia (UTM), Kuala Lumpur</p>
-<p class="lede">I work on continual, multimodal intelligence for understanding complex and dynamic real-world systems. My MPhil research, Earth Copilot, is a proposed continual multimodal world model for Earth observation and environmental intelligence.</p>
-<p class="kw">Continual learning · Multimodal learning · Foundation models · World models · Computer vision · Geospatial AI · Explainable AI</p>
-<p class="metrics"><a href="https://scholar.google.com/citations?user=chPlK94AAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><b>263</b> citations · h-index <b>10</b> · i10-index <b>11</b></a> <span>Google Scholar</span></p>
+<p class="lede">Building continual, multimodal AI systems for Earth observation and environmental intelligence.</p>
+<a class="stats" href="https://scholar.google.com/citations?user=chPlK94AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar: 263 citations, h-index 10, i10-index 11"><span><b>263</b><small>Citations</small></span><span><b>10</b><small>h-index</small></span><span><b>11</b><small>i10-index</small></span></a>
 <p class="links">
-<a class="btn" href="https://drive.google.com/file/d/18sO4GU8pgxscjt4gtzJ56O7Vb1n-sE7X/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download CV</a>
-<a href="https://scholar.google.com/citations?user=chPlK94AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-<a href="https://github.com/mdjisanmashrafi" target="_blank" rel="noopener noreferrer">GitHub</a>
-<a href="https://www.linkedin.com/in/md-jisan-mashrafi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-<a href="https://orcid.org/0009-0009-2640-586X" target="_blank" rel="noopener noreferrer">ORCID</a>
-<a href="mailto:mdjisanmashrafi@graduate.utm.my">Email</a></p>
+<a class="btn" href="https://drive.google.com/file/d/112kfSsUVb_A40-DNOkZ_fRG874U_ytLL/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-dl"/></svg>Download CV</a>
+<a href="#contact"><svg class="i"><use href="#i-mail"/></svg>Get in touch</a></p>
 </div>
-<figure class="ph"><img src="newphoto.jpg" alt="Portrait of Md. Jisan Mashrafi" width="280" height="340" onerror="this.parentNode.classList.add('nophoto');this.remove()"></figure>
+<figure class="ph"><img src="newphoto.jpg" alt="Portrait of Md. Jisan Mashrafi" width="200" height="244" onerror="this.parentNode.classList.add('nophoto');this.remove()"></figure>
 </div></section>
 
-<section id="about" class="sec"><div class="wrap grid"><h2>About</h2><div class="body">
-<p>I am a Graduate Research Assistant in the Faculty of Artificial Intelligence at Universiti Teknologi Malaysia, where I am pursuing an MPhil in Artificial Intelligence with Prof. Shreeshivadasan Chelliapan and Dr. Siti Sophiayati Binti Yuhaniz.</p>
-<p>I completed my BSc in Computer Science and Engineering at BRAC University (2021–2025). My undergraduate thesis proposed ReCAN, a lightweight attention network for medical image classification, later published in BMC Medical Imaging. That work, together with applied research on climate, hydrology and agriculture, moved my focus from deep learning and computer vision toward models that keep learning from evolving, multimodal data.</p>
-<p>My current work covers efficient deep learning, continual learning, multimodal learning and foundation models. I collaborate with researchers at York University (Lassonde School of Engineering) and King Abdulaziz University (Faculty of Environmental Sciences), and I aim to build adaptive AI systems that reason reliably over changing data.</p>
+<section id="about" class="sec"><div class="wrap grid"><h2>About</h2><div class="body two">
+<div>
+<p class="lead">Advancing AI for environmental intelligence and dynamic Earth observation.</p>
+<p>Graduate Research Assistant in the Faculty of Artificial Intelligence at UTM, pursuing an MPhil under Prof. Shreeshivadasan Chelliapan and Dr. Siti Sophiayati Binti Yuhaniz. BSc in Computer Science and Engineering from BRAC University (2021–2025); my thesis, ReCAN, a lightweight attention network for medical imaging, was published in BMC Medical Imaging.</p>
+<p>Applied work on climate, hydrology and agriculture moved me from deep learning and computer vision toward continual, multimodal learning. I integrate transformers, foundation models and continual learning to build adaptive systems that understand long-term environmental change, supporting remote sensing, climate intelligence, monitoring and decision support. I collaborate with York University and King Abdulaziz University.</p>
+<ul class="tags ac" style="margin-top:10px"><li>Diffusion Models</li><li>Foundation Models</li><li>Continual Learning</li><li>Geospatial AI</li><li>Remote Sensing AI</li></ul>
+</div>
+<dl class="qf card" style="align-self:start"><dt>Location</dt><dd>Kuala Lumpur, Malaysia</dd><dt>Position</dt><dd>Graduate Research Assistant (GRA), UTM</dd><dt>Education</dt><dd>MPhil in AI, UTM<br>BSc CSE, BRAC University</dd><dt>Email</dt><dd><a href="mailto:mdjisanmashrafi@graduate.utm.my">mdjisanmashrafi@graduate.utm.my</a><br><a href="mailto:jisanmashrafi542@gmail.com">jisanmashrafi542@gmail.com</a></dd><dt>Phone</dt><dd><a href="tel:+601135140447">+60 11-3514 0447</a></dd></dl>
 </div></div></section>
 
-<section id="interests" class="sec"><div class="wrap grid"><h2>Research interests</h2><div class="body"><dl class="ri">
-<div><dt>Artificial intelligence and machine learning</dt><dd>Machine learning, deep learning, representation learning</dd></div>
-<div><dt>Continual and multimodal learning</dt><dd>Continual learning, multimodal learning, transformers</dd></div>
-<div><dt>Foundation models and world models</dt><dd>Foundation models, vision models, world models</dd></div>
-<div><dt>Computer vision and geospatial AI</dt><dd>Computer vision, spatiotemporal modeling, geospatial AI, Earth observation</dd></div>
-<div><dt>Explainable and trustworthy AI</dt><dd>Explainable AI, interpretable medical vision-language models</dd></div>
-</dl></div></div></section>
+<section id="interests" class="sec"><div class="wrap grid"><h2>Research interests</h2><div class="body cols">
+<div><h4>AI and machine learning</h4><ul class="tags"><li>Machine learning</li><li>Deep learning</li><li>Representation learning</li></ul></div>
+<div><h4>Continual and multimodal learning</h4><ul class="tags"><li>Continual learning</li><li>Multimodal learning</li><li>Transformers</li></ul></div>
+<div><h4>Foundation and world models</h4><ul class="tags"><li>Foundation models</li><li>Vision models</li><li>World models</li></ul></div>
+<div><h4>Computer vision and geospatial AI</h4><ul class="tags"><li>Computer vision</li><li>Spatiotemporal modeling</li><li>Geospatial AI</li><li>Earth observation</li></ul></div>
+<div><h4>Explainable and trustworthy AI</h4><ul class="tags"><li>Explainable AI</li><li>Interpretable medical VLMs</li></ul></div>
+</div></div></section>
 
 <section id="research" class="sec"><div class="wrap grid"><h2>Current research</h2><div class="body">
-<h3 class="serif">Earth Copilot: A Continual Multimodal World Model for Dynamic Earth Observation and Long-Term Environmental Intelligence</h3>
-<p class="meta">MPhil research · UTM · ongoing proposal, not a completed system</p>
-<p><b>Motivation.</b> Multimodal foundation models have improved Earth observation, but most stay static after pretraining and cannot adapt as environmental conditions change.</p>
-<p><b>Objective.</b> Learn a persistent, dynamic latent representation of the Earth from streaming observations, supporting long-term environmental reasoning, anomaly detection and scenario-based decision-making.</p>
-<figure class="fig"><svg viewBox="0 0 640 190" role="img" aria-labelledby="ft fd"><title id="ft">Proposed Earth Copilot framework</title><desc id="fd">Optical imagery, SAR and DEM feed adaptive multimodal fusion, which updates a persistent latent Earth state with drift detection and selective replay, producing anomaly detection, long-term trends and scenario analysis.</desc>
+<p class="serif">Earth Copilot: A Continual Multimodal World Model for Dynamic Earth Observation and Long-Term Environmental Intelligence</p>
+<p class="meta">MPhil research, UTM. Ongoing proposal, not a completed system.</p>
+<div class="rg">
+<div>
+<p>Most multimodal Earth observation models stay static after pretraining and cannot adapt to changing environmental conditions. Earth Copilot proposes a persistent, dynamic latent representation of the Earth that learns continually from streaming observations.</p>
+<h3>Objectives</h3>
+<ul class="ob"><li><svg class="i"><use href="#i-layers"/></svg><span><b>Represent:</b> integrate optical, SAR and elevation data in one latent state.</span></li><li><svg class="i"><use href="#i-loop"/></svg><span><b>Adapt:</b> learn continually while mitigating catastrophic forgetting.</span></li><li><svg class="i"><use href="#i-ai"/></svg><span><b>Reason:</b> support long-term environmental reasoning, anomaly detection and scenario-based decision-making.</span></li></ul>
+</div>
+<figure class="card fig"><svg viewBox="0 0 640 190" role="img" aria-labelledby="ft fd"><title id="ft">Proposed Earth Copilot framework</title><desc id="fd">Optical imagery, SAR and DEM feed adaptive multimodal fusion, which updates a persistent latent Earth state with drift detection and selective replay, producing anomaly detection, long-term trends and scenario analysis.</desc>
 <g class="b"><rect x="8" y="14" width="130" height="38" rx="3"/><rect x="8" y="76" width="130" height="38" rx="3"/><rect x="8" y="138" width="130" height="38" rx="3"/><rect x="190" y="60" width="130" height="70" rx="3"/><rect x="370" y="44" width="110" height="102" rx="3"/><rect x="524" y="14" width="108" height="38" rx="3"/><rect x="524" y="76" width="108" height="38" rx="3"/><rect x="524" y="138" width="108" height="38" rx="3"/></g>
 <g class="t" text-anchor="middle"><text x="73" y="38">Optical imagery</text><text x="73" y="100">SAR</text><text x="73" y="162">DEM</text><text x="255" y="92">Adaptive</text><text x="255" y="108">multimodal fusion</text><text x="425" y="88">Persistent</text><text x="425" y="104">latent Earth</text><text x="425" y="120">state</text><text x="578" y="38">Anomalies</text><text x="578" y="100">Long-term trends</text><text x="578" y="162">What-if scenarios</text></g>
 <g class="l"><path d="M138 33 190 80M138 95 190 95M138 157 190 110M320 95H370M480 95 524 33M480 95H524M480 95 524 157"/><path class="d" d="M425 144v26H255v-40"/></g><text class="t s" x="340" y="184" text-anchor="middle">drift detection · selective replay · regularization</text></svg>
-<figcaption>Proposed framework (schematic). Transformer-based fusion with continual-learning components to mitigate catastrophic forgetting.</figcaption></figure>
-<ul class="tags"><li>Optical imagery</li><li>Synthetic Aperture Radar</li><li>Digital Elevation Models</li><li>Continual learning</li><li>Adaptive multimodal fusion</li><li>Concept drift detection</li><li>Anomaly detection</li><li>Scenario-based decision-making</li></ul>
-<h3 class="serif">Review manuscript</h3>
-<p><b>Continual Multimodal World Models for Earth Observation: A Review of Foundations, Challenges, and Environmental Intelligence.</b> <span class="st">Under peer review · International Journal of Computer Vision</span></p>
-<p>A review tracing the evolution from static remote sensing classifiers to adaptive, physics-aware environmental intelligence architectures capable of long-term planetary-scale simulation and autonomous reasoning.</p>
+<figcaption>Proposed framework (schematic)</figcaption></figure>
+</div>
+<div class="rg3">
+<div><h4>Data modalities</h4><ul class="tags ac"><li>Optical imagery</li><li>SAR</li><li>DEM</li><li>Ancillary geospatial data</li></ul></div>
+<div><h4>Approach</h4><ul class="tags ac"><li>Transformer-based fusion</li><li>Adaptive multimodal fusion</li><li>Selective replay</li><li>Regularization</li><li>Concept drift detection</li></ul></div>
+<div><h4>Outputs</h4><ul class="tags ac"><li>Anomaly detection</li><li>Long-term trend tracking</li><li>Environmental reasoning</li><li>What-if scenarios</li></ul></div>
+</div>
+<div class="card rev"><div><b>Review manuscript:</b> Continual Multimodal World Models for Earth Observation: A Review of Foundations, Challenges, and Environmental Intelligence.<details><summary>About this review</summary><p>Traces the evolution from static remote sensing classifiers to adaptive, physics-aware environmental intelligence architectures capable of long-term planetary-scale simulation and autonomous reasoning.</p></details></div><span class="st">Under peer review, IJCV</span></div>
 </div></div></section>
+
+<section id="skills" class="sec"><div class="wrap grid"><h2>Technical expertise</h2><div class="body"><div id="skills-list" class="sk"></div></div></div></section>
 
 <section id="publications" class="sec"><div class="wrap grid"><h2>Publications</h2><div class="body">
 <div class="tools"><div id="chips" role="group" aria-label="Filter publications"><button class="on" data-f="all">All</button><button data-f="J">Journal</button><button data-f="C">Conference</button><button data-f="M">Under review</button></div>
 <label class="sr" for="q">Search publications</label><input id="q" type="search" placeholder="Search title, author, venue"></div>
-<p id="count" class="meta" aria-live="polite"></p><ol id="pubs" class="pubs"></ol>
+<p id="count" class="meta" aria-live="polite" style="margin-top:6px"></p><ol id="pubs" class="pubs"></ol><button id="more" type="button"></button>
 </div></div></section>
 
-<section id="projects" class="sec"><div class="wrap grid"><h2>Projects</h2><div class="body"><div id="proj"></div></div></div></section>
+<section id="projects" class="sec"><div class="wrap grid"><h2>Projects</h2><div class="body"><div id="proj" class="pg"></div></div></div></section>
 
-<section id="experience" class="sec"><div class="wrap grid"><h2>Experience and education</h2><div class="body">
-<h3 class="serif">Research</h3>
-<div class="row"><div class="when"></div><div><b>Graduate Research Assistant</b><br><span class="meta">Faculty of Artificial Intelligence, Universiti Teknologi Malaysia</span><p>Researching efficient deep learning, continual and multimodal learning, and Transformer-based foundation models for adaptive computer vision and spatiotemporal intelligence.</p></div></div>
-<div class="row"><div class="when"></div><div><b>Research Collaborator</b><br><span class="meta">Lassonde School of Engineering, York University</span><p>Investigated holographic vector embeddings for structured reasoning and argument retrieval, enabling efficient structural queries over reasoning trees and argumentative evidence.</p></div></div>
-<div class="row"><div class="when"></div><div><b>Research Collaborator</b><br><span class="meta">Faculty of Environmental Sciences, King Abdulaziz University</span><p>Developed an LSTM- and GIS-based framework integrating rainfall forecasting and satellite-derived indices for long-term flood susceptibility assessment and climate-resilient infrastructure planning.</p></div></div>
-<h3 class="serif">Education</h3>
-<div class="row"><div class="when">Feb 2026 – Present</div><div><b>Master of Philosophy in Artificial Intelligence</b><br><span class="meta">Universiti Teknologi Malaysia, Kuala Lumpur</span><p>Focus: efficient deep learning, continual learning, multimodal learning and foundation models. Advisors: <a href="https://scholar.google.com/citations?user=oo_okhUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Prof. Shreeshivadasan Chelliapan</a> and <a href="https://scholar.google.com/citations?user=QoLSHqcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Siti Sophiayati Binti Yuhaniz</a>.</p></div></div>
-<div class="row"><div class="when">Jun 2021 – May 2025</div><div><b>BSc in Computer Science and Engineering</b><br><span class="meta">BRAC University, Dhaka, Bangladesh</span><p>Coursework: Machine Learning, Artificial Intelligence, Data Structures and Algorithms, Probability and Statistics.</p></div></div>
-<h3 class="serif">Professional and entrepreneurial</h3>
-<div class="row"><div class="when">Jul 2025 – Present</div><div><b>Chief Operating Officer, <a href="https://nexetlab.vercel.app/" target="_blank" rel="noopener noreferrer">neXet Lab</a></b><p>Led AI, software automation and React-based application development, overseeing end-to-end project architecture, implementation and client delivery.</p><ul id="nx" class="plain"></ul></div></div>
-<div class="row"><div class="when">Feb 2024 – May 2025</div><div><b>Software Engineer</b><br><span class="meta">Homeland Life Insurance Company Limited</span><p>Developed corporate web platforms, integrated online and banking payment systems, and built Android-based agent performance tracking and automated incentive solutions, contributing to a 13% increase in client acquisition.</p></div></div>
+<section id="experience" class="sec"><div class="wrap grid"><h2>Experience and education</h2><div class="body xp">
+<div>
+<h3>Research</h3>
+<div class="row"><div class="when">GRA</div><div><b>Graduate Research Assistant</b>, Faculty of AI, UTM<p>Efficient deep learning, continual and multimodal learning, and Transformer-based foundation models for adaptive computer vision and spatiotemporal intelligence.</p></div></div>
+<div class="row"><div class="when">Collaborator</div><div><b>Research Collaborator</b>, Lassonde School of Engineering, York University<p>Holographic vector embeddings for structured reasoning and argument retrieval, enabling efficient structural queries over reasoning trees and argumentative evidence.</p></div></div>
+<div class="row"><div class="when">Collaborator</div><div><b>Research Collaborator</b>, Faculty of Environmental Sciences, King Abdulaziz University<p>LSTM- and GIS-based framework integrating rainfall forecasting and satellite-derived indices for long-term flood susceptibility assessment and climate-resilient infrastructure planning.</p></div></div>
+</div>
+<div>
+<h3>Education</h3>
+<div class="row"><div class="when">Feb 2026 – Present</div><div><b>MPhil in Artificial Intelligence</b>, Universiti Teknologi Malaysia<p>Efficient deep learning, continual learning, multimodal learning and foundation models. Advisors: <a href="https://scholar.google.com/citations?user=oo_okhUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Prof. Shreeshivadasan Chelliapan</a>, <a href="https://scholar.google.com/citations?user=QoLSHqcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Siti Sophiayati Binti Yuhaniz</a>.</p></div></div>
+<div class="row"><div class="when">Jun 2021 – May 2025</div><div><b>BSc in Computer Science and Engineering</b>, BRAC University<p>Machine Learning, Artificial Intelligence, Data Structures and Algorithms, Probability and Statistics.</p></div></div>
+<h3>Professional</h3>
+<div class="row"><div class="when">Feb 2024 – May 2025</div><div><b>Software Engineer</b>, Homeland Life Insurance Company Limited<p>Built corporate web platforms, online and banking payment integrations, and Android agent-tracking and automated incentive tools, contributing to a 13% increase in client acquisition.</p></div></div>
+</div>
 </div></div></section>
 
-<section id="service" class="sec"><div class="wrap grid"><h2>Academic service</h2><div class="body"><ul class="plain" id="svc"></ul></div></div></section>
-
-<section id="honors" class="sec"><div class="wrap grid"><h2>Honors and skills</h2><div class="body">
-<h3 class="serif">Honors and awards</h3>
-<div class="row"><div class="when">Mar 2023</div><div>Runner-Up, National Soccer Bot Competition<br><span class="meta">Robotics Club of BRAC University</span></div></div>
-<div class="row"><div class="when">Mar 2023</div><div>The Duke of Edinburgh’s Award, Bronze Level<br><span class="meta">Leadership and community service</span></div></div>
-<div class="row"><div class="when">Jun 2021</div><div>Merit-Based Scholarship (50%)<br><span class="meta">BRAC University</span></div></div>
-<h3 class="serif">Technical expertise</h3><dl id="skills" class="ri"></dl>
-<h3 class="serif">Certifications</h3><ul id="certs" class="plain"></ul>
+<section id="entrepreneurial" class="sec"><div class="wrap grid"><h2>Entrepreneurial experience</h2><div class="body">
+<p><b>Chief Operating Officer, <a href="https://nexetlab.vercel.app/" target="_blank" rel="noopener noreferrer">neXet Lab</a></b> <span class="meta">· Jul 2025 – Present</span></p>
+<p class="meta" style="font-size:13.5px">A web and AI product studio building performant websites and automation tools. I lead AI, software automation and React-based development, overseeing architecture, implementation and client delivery.</p>
+<div id="nx" class="nxg"></div>
 </div></div></section>
 
-<section id="contact" class="sec"><div class="wrap grid"><h2>Contact</h2><div class="body">
-<p>Open to research collaboration and PhD opportunities.</p>
-<p><a href="mailto:mdjisanmashrafi@graduate.utm.my">mdjisanmashrafi@graduate.utm.my</a><br>Kuala Lumpur, Malaysia</p>
-<p class="links"><a class="btn" href="https://drive.google.com/file/d/18sO4GU8pgxscjt4gtzJ56O7Vb1n-sE7X/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download CV</a>
-<a href="https://www.linkedin.com/in/md-jisan-mashrafi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-<a href="https://github.com/mdjisanmashrafi" target="_blank" rel="noopener noreferrer">GitHub</a>
-<a href="https://scholar.google.com/citations?user=chPlK94AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-<a href="https://orcid.org/0009-0009-2640-586X" target="_blank" rel="noopener noreferrer">ORCID</a>
-<a href="https://mdjisanmashrafi.github.io" target="_blank" rel="noopener noreferrer">mdjisanmashrafi.github.io</a></p>
+<section id="honors" class="sec"><div class="wrap grid"><h2>Honors and certifications</h2><div class="body">
+<div class="hg">
+<div class="card"><svg class="i"><use href="#i-award"/></svg><b>Runner-Up, National Soccer Bot Competition</b><span class="meta">Robotics Club of BRAC University · Mar 2023</span></div>
+<div class="card"><svg class="i"><use href="#i-flag"/></svg><b>Duke of Edinburgh’s Award, Bronze</b><span class="meta">Leadership and community service · Mar 2023</span></div>
+<div class="card"><svg class="i"><use href="#i-cap"/></svg><b>Merit-Based Scholarship (50%)</b><span class="meta">BRAC University · Jun 2021</span></div>
+<div class="card"><svg class="i"><use href="#i-star"/></svg><b>Academic Excellence</b><span class="meta">Consistent high achievement in computer science and AI research</span></div>
+</div>
+<h3 class="ih"><svg class="i"><use href="#i-cert"/></svg>Certifications</h3><div id="certs" class="cg"></div>
+</div></div></section>
+
+<section id="service" class="sec"><div class="wrap grid"><h2>Academic service</h2><div class="body sv"><div><h3 class="ih" style="margin-top:0"><svg class="i"><use href="#i-book"/></svg>Peer reviewer, journals</h3><ul id="svc" class="tags"></ul></div><div><h3 class="ih" style="margin-top:0"><svg class="i"><use href="#i-chat"/></svg>Reviewer, conference</h3><ul class="tags"><li>NAACL</li></ul></div></div></div></section>
+
+<section id="contact" class="sec"><div class="wrap grid"><h2>Contact</h2><div class="body ct">
+<div><p>Get in touch for research collaborations, AI opportunities, or new projects.</p>
+<p style="margin-top:8px"><a href="mailto:mdjisanmashrafi@graduate.utm.my">mdjisanmashrafi@graduate.utm.my</a><br><a href="mailto:jisanmashrafi542@gmail.com">jisanmashrafi542@gmail.com</a><br><a href="tel:+601135140447">+60 11-3514 0447</a> · Kuala Lumpur, Malaysia</p></div>
+<p class="links" style="margin:0;align-content:start"><a class="btn" href="https://drive.google.com/file/d/112kfSsUVb_A40-DNOkZ_fRG874U_ytLL/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-dl"/></svg>Download CV</a>
+<a href="https://www.linkedin.com/in/md-jisan-mashrafi/" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-user"/></svg>LinkedIn</a>
+<a href="https://github.com/mdjisanmashrafi" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-code"/></svg>GitHub</a>
+<a href="https://scholar.google.com/citations?user=chPlK94AAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-book"/></svg>Google Scholar</a>
+<a href="https://orcid.org/0009-0009-2640-586X" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-id"/></svg>ORCID</a>
+<a href="https://mdjisanmashrafi.github.io" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-globe"/></svg>Portfolio</a></p>
 </div></div></section>
 </main>
-<footer class="wrap foot">© 2026 Md. Jisan Mashrafi. Citation metrics from Google Scholar, as listed on the CV.</footer>
+<footer class="wrap foot">© 2026 Md. Jisan Mashrafi. All rights reserved.</footer>
 <button id="top" class="ib" aria-label="Back to top" hidden>&uarr;</button>
 
 <script>
@@ -202,8 +285,9 @@ details summary{cursor:pointer;color:var(--ac);font-size:14px;margin-top:8px}det
 var $=function(s){return document.querySelector(s)};
 function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
 function ext(u,t){return '<a href="'+u+'" target="_blank" rel="noopener noreferrer">'+t+'</a>'}
+function tags(a){return '<ul class="tags">'+a.map(function(t){return "<li>"+esc(t)+"</li>"}).join("")+"</ul>"}
 var D="https://doi.org/";
-/* type: J journal, C conference, M under review */
+/* Publications: id, type (J journal, C conference, M under review), year/status, title, authors, venue, metric, link */
 var P=[
 ["J.1","J","2026","Earth System Intelligence Framework for Solar Resource Assessment and Coastal Energy Planning","M. J. Mashrafi, S. Chelliapan, S. S. B. Yuhaniz","Earth Systems and Environment","Q1, IF 5.0",D+"10.1007/s41748-026-01323-z"],
 ["J.2","J","2026","ClusSumm: A User-Centered Hierarchical Clustering and Adaptive Transformer Framework for Efficient Summarization of MOOC Learner Reviews","M. A. A. Tanzin, M. J. Mashrafi","Discover Artificial Intelligence","Q1, CiteScore 6",D+"10.1007/s44163-026-02491-7"],
@@ -219,9 +303,20 @@ var P=[
 ["C.5","C","2025","Federated vs. Centralized GCNs for Privacy-Preserving Drug–Gene Interaction Prediction","M. J. Mashrafi, H. A. Alif, M. Uddin, U. Haldar, L. Hasan, M. M. Rahman","ICIDCA 2025, IEEE, pp. 998–1004","",D+"10.1109/ICIDCA66325.2025.11280352"],
 ["C.6","C","2025","Machine Learning-Driven Thermal Zonation Framework for Urban Heat Island Assessment Using Landsat 9 Thermal Infrared Data: A Case Study of Chennai Metropolitan Region","H. A. Alif, M. J. Mashrafi, A. Biswas, A. B. Kamrul, M. Ahamed, A. Al Zahur Rafi","Procedia Computer Science","",D+"10.1016/j.procs.2026.05.159"],
 ["C.7","C","2025","Climate Pattern Shift Index (CPSI): A Machine Learning-Based Metric for Analysing Temporal Instability in Annual Temperature Profiles","H. A. Alif, M. J. Mashrafi, A. H. M. Golam Hafiz, I. Ahmed, A. S. Sagor, D. Chowdhury","Procedia Computer Science","",D+"10.1016/j.procs.2026.05.156"],
-["M.1","M","Peer review","Continual Multimodal World Models for Earth Observation: A Review of Foundations, Challenges, and Environmental Intelligence","","International Journal of Computer Vision","",""]
+["J.8","J","2026","Risk-Informed Flood Management Under Climate Variability: A Hybrid Temporal–Ensemble Artificial Intelligence Framework","","Bulletin of Atmospheric Science and Technology","Q2",D+"10.1007/s42865-026-00126-4"],
+["C.8","C","2025","Comparative Machine Learning Framework for Rainfall Forecasting and Agricultural Loss Estimation","","CMSS 2025, IEEE","",D+"10.1109/CMSS66566.2025.11182335"],
+["C.9","C","2025","Forecasting Literacy Development in Bangladesh: A Comparative Study of Machine Learning and Hybrid Approaches","","ECCE 2025, IEEE","",D+"10.1109/ECCE64574.2025.11014044"],
+["C.10","C","2025","PhishVQC: Optimizing Phishing URL Detection with Correlation-Based Feature Selection and Variational Quantum Classifier","","ISACC 2025, IEEE","",D+"10.1109/ISACC65211.2025.10969366"],
+["C.11","C","2025","Hybrid CNN–Random Forest Model for Predicting Water Level Fluctuations in Kaptai Reservoir","","ECCE 2025, IEEE","",D+"10.1109/ECCE64574.2025.11013997"],
+["C.12","C","2025","Unsupervised Climate Anomaly Detection with Isolation Forest and One-Class SVM","","ICISC 2025, IEEE","",D+"10.1109/ICISC65841.2025.11188374"],
+["C.13","C","2025","Evaluating LLMs in Higher Education: A SEM-Based Comparison of ChatGPT and DeepSeek Using the IS Success Model","","ASIANCON 2025, IEEE, Pune, India","",D+"10.1109/ASIANCON66527.2025.11281210"],
+["C.14","C","2025","Unsupervised Machine Learning for Climate Surveillance: Comparative Temperature Anomaly Detection in Northwestern Bangladesh","","ICICIS 2025, IEEE, Pune, India","","https://ieeexplore.ieee.org/document/11371242"],
+["C.15","C","2025","Explainable Machine Learning for Preoperative Prediction of Tumor Focality in Thyroid Cancer Using Lifestyle and Clinical Examination Data","","COMPUTINGCON 2025, IEEE, Talegaon, India","",D+"10.1109/COMPUTINGCON64838.2025.11378288"],
+["C.16","C","2025","Cross-Domain AI Fusion: Integrating Smart Grid Environmental Signals with Diabetes Risk Prediction","","ICSCSS 2025, IEEE, Coimbatore, India","",D+"10.1109/ICSCSS64956.2025.11500630"],
+["M.1","M","Peer review","Continual Multimodal World Models for Earth Observation: A Review of Foundations, Challenges, and Environmental Intelligence","","International Journal of Computer Vision","",""],
+["M.2","M","Peer review","Half-Century Wind Resource Assessment and Energy Yield Mapping of Bangladesh Using Hybrid Spatio-Temporal Machine Learning","","International Journal of Climatology","Q1, IF 3.2",""]
 ];
-var list=$("#pubs"),cnt=$("#count"),f="all",q="";
+var list=$("#pubs"),cnt=$("#count"),more=$("#more"),f="all",q="",open=false,LIM=10;
 function pubHtml(p){
  var a=esc(p[4]).replace("M. J. Mashrafi","<b>M. J. Mashrafi</b>"),first=p[4].indexOf("M. J. Mashrafi")===0;
  var badge=(p[2]==="Accepted"||p[2]==="Peer review")?'<span class="pb">'+p[2]+"</span>":"";
@@ -230,81 +325,76 @@ function pubHtml(p){
 }
 list.innerHTML=P.map(pubHtml).join("");
 function apply(){
- var n=0;[].forEach.call(list.children,function(li,i){
+ var n=0,shown=0;
+ [].forEach.call(list.children,function(li,i){
   var ok=(f==="all"||li.dataset.t===f)&&(!q||P[i].join(" ").toLowerCase().indexOf(q)>-1);
-  li.hidden=!ok;if(ok)n++;});
- cnt.textContent=n+" of "+P.length+" shown";
+  if(ok)n++;
+  var vis=ok&&(open||q||shown<LIM);
+  li.hidden=!vis;if(vis)shown++;});
+ cnt.textContent=shown+" of "+n+" matching ("+P.length+" total)";
+ more.hidden=!!q||n<=LIM;
+ more.textContent=open?"Show fewer":"Show all "+n;
 }
 $("#chips").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
  [].forEach.call(this.children,function(c){c.classList.toggle("on",c===b)});f=b.dataset.f;apply()});
 $("#q").addEventListener("input",function(){q=this.value.trim().toLowerCase();apply()});
+more.addEventListener("click",function(){open=!open;apply()});
 apply();
 
+/* Projects: title, category, description, tech tags, links, flagship, wide */
 var PR=[
-["Earth Copilot","Geospatial AI · MPhil research (ongoing)","A proposed continual multimodal world model for dynamic Earth observation. It integrates optical imagery, SAR, DEM and geospatial data through transformer-based fusion to detect anomalies, track long-term trends and support what-if scenario analysis.","Transformer-based fusion, selective replay, regularization, adaptive fusion, concept drift detection",[],1,"Recent advances in multimodal foundation models have improved Earth observation, but most existing models stay static after pretraining and cannot adapt to evolving environmental conditions. This research proposes Earth Copilot, a continual multimodal world model that learns a dynamic latent representation of the Earth from optical imagery, SAR, digital elevation models and ancillary geospatial data. It combines transformer-based multimodal fusion with continual learning techniques, including selective replay, regularization, adaptive fusion and concept drift detection, to support lifelong learning from streaming satellite observations while mitigating catastrophic forgetting."],
-["BASINGRID: Basin-Scale Geospatial Foundation Model","Geospatial AI · 2026","A multimodal CNN–Swin Transformer framework using geospatial and hydrological data to generate reusable 128-dimensional basin embeddings for retrieval and downstream analysis.","CNN, Swin Transformer, geospatial and hydrological data",[["GitHub","https://github.com/mdjisanmashrafi/HydroFoundationDashboard"]],1],
-["MedXplain: Prototype-Grounded Visual Evidence for Medical VLMs","Medical vision-language models · 2026","An interpretable medical VLM integrating MedGemma, semantic prototypes, similar-case retrieval and Grad-CAM for visual evidence inspection.","MedGemma, semantic prototypes, case retrieval, Grad-CAM",[["GitHub","https://github.com/mdjisanmashrafi/explainable-medical-vlm"]],1],
-["ReCAN: Lightweight Residual Channel Attention Network","Medical image classification · Undergraduate thesis, Oct 2025 (Grade A, 95%)","A convolutional network combining alternating skip connections with a custom channel-attention module. The 14.47M-parameter architecture improved classification accuracy by 8–12% across diverse MedMNIST benchmarks. Published in BMC Medical Imaging (Q1, 2026).","CNN, channel attention, skip connections, MedMNIST",[["Journal DOI","https://doi.org/10.1186/s12880-026-02994-w"],["Thesis","http://hdl.handle.net/10361/27450"]],1],
-["ClusSumm","NLP · Published in Discover Artificial Intelligence, 2026","Clustering-based summarization of online course reviews (12.65% compression), outperforming baselines.","Hierarchical clustering, adaptive transformer",[["Journal DOI",D+"10.1007/s44163-026-02491-7"],["Pre-print","https://drive.google.com/file/d/1yHnls6FS_wcYy7Hpxebm_CJvV1o3Hbpn/view?usp=sharing"],["Dataset","https://www.kaggle.com/datasets/tanzinabdul/coursera-learning-feedback-multiple-domain-7k"]]],
-["Mitigating Misleading Metrics: Hybrid Model for Audience Sentiment Analysis","NLP","A machine learning model combining sentiment and engagement metrics for reliable digital audience evaluation.","Sentiment analysis, engagement metrics",[["Pre-print","https://drive.google.com/file/d/1Up6B8aSpBPtNti5BypQSCru3TCvI0jPf/view?usp=sharing"],["Dataset","https://www.kaggle.com/datasets/tanzinabdul/bangla-movie-and-drama-comments-sentiment-dataset"]]],
-["Rentorium: Peer-to-Peer Rental and Borrowing Platform","Software engineering","A Django-based marketplace enabling secure rentals and payments, promoting a circular economy.","Django",[["Code","https://github.com/TanzinAbdul/Django-Project-Rentorium"]]]
+["Earth Copilot","Geospatial AI · MPhil research (ongoing)","Proposed continual multimodal world model for dynamic Earth observation. Integrates optical imagery, SAR, DEM and geospatial data through transformer-based fusion to detect anomalies, track long-term trends and support what-if scenario analysis.",["Transformer fusion","Selective replay","Regularization","Concept drift detection"],[],1,1,"Recent advances in multimodal foundation models have improved Earth observation, but most existing models stay static after pretraining and cannot adapt to evolving environmental conditions. This research proposes Earth Copilot, a continual multimodal world model that learns a dynamic latent representation of the Earth from optical imagery, SAR, digital elevation models and ancillary geospatial data. It combines transformer-based multimodal fusion with continual learning techniques, including selective replay, regularization, adaptive fusion and concept drift detection, to support lifelong learning from streaming satellite observations while mitigating catastrophic forgetting."],
+["BASINGRID","Geospatial AI · 2026","Basin-scale geospatial foundation model. A multimodal CNN–Swin Transformer framework that turns geospatial and hydrological data into reusable 128-dimensional basin embeddings for retrieval and downstream analysis.",["CNN","Swin Transformer","Embeddings"],[["GitHub","https://github.com/mdjisanmashrafi/HydroFoundationDashboard"]],1],
+["MedXplain","Medical vision-language models · 2026","Prototype-grounded visual evidence for medical VLMs. Interpretable model integrating MedGemma, semantic prototypes, similar-case retrieval and Grad-CAM.",["MedGemma","Prototypes","Grad-CAM"],[["GitHub","https://github.com/mdjisanmashrafi/explainable-medical-vlm"]],1],
+["ReCAN","Medical imaging · Undergraduate thesis, Oct 2025 (Grade A, 95%)","Lightweight residual channel attention network with alternating skip connections. 14.47M parameters; improved accuracy by 8–12% across MedMNIST benchmarks. Published in BMC Medical Imaging (Q1, 2026).",["CNN","Channel attention","MedMNIST"],[["Journal DOI","https://doi.org/10.1186/s12880-026-02994-w"],["Thesis","http://hdl.handle.net/10361/27450"]],1,1],
+["ClusSumm","NLP · Discover Artificial Intelligence, 2026","Clustering-based summarization of online course reviews (12.65% compression), outperforming baselines.",["Hierarchical clustering","Adaptive transformer"],[["Journal DOI",D+"10.1007/s44163-026-02491-7"],["Pre-print","https://drive.google.com/file/d/1yHnls6FS_wcYy7Hpxebm_CJvV1o3Hbpn/view?usp=sharing"],["Dataset","https://www.kaggle.com/datasets/tanzinabdul/coursera-learning-feedback-multiple-domain-7k"]]],
+["Mitigating Misleading Metrics","NLP","Hybrid model for audience sentiment analysis, combining sentiment and engagement metrics for reliable digital audience evaluation.",["Sentiment analysis","Engagement metrics"],[["Pre-print","https://drive.google.com/file/d/1Up6B8aSpBPtNti5BypQSCru3TCvI0jPf/view?usp=sharing"],["Dataset","https://www.kaggle.com/datasets/tanzinabdul/bangla-movie-and-drama-comments-sentiment-dataset"]]],
+["Rentorium","Software engineering","Peer-to-peer rental and borrowing platform: a Django marketplace enabling secure rentals and payments, promoting a circular economy.",["Django"],[["Code","https://github.com/TanzinAbdul/Django-Project-Rentorium"]]]
 ];
 $("#proj").innerHTML=PR.map(function(p){
  var ls=p[4].map(function(l){return ext(l[1],l[0])}).join("");
- return '<article class="pr'+(p[5]?"":" sm")+'"><h4>'+esc(p[0])+'</h4><div class="meta">'+esc(p[1])+"</div><p>"+esc(p[2])+'</p><div class="meta">Methods: '+esc(p[3])+"</div>"+(p[6]?"<details><summary>Read abstract</summary><p>"+esc(p[6])+"</p></details>":"")+(ls?'<div class="links">'+ls+"</div>":"")+"</article>";
+ return '<article class="card pc'+(p[5]?" fl":"")+(p[6]?" w2":"")+'"><div class="meta">'+esc(p[1])+"</div><h4>"+esc(p[0])+"</h4><p>"+esc(p[2])+"</p>"+(p[7]?"<details><summary>Read abstract</summary><p>"+esc(p[7])+"</p></details>":"")+tags(p[3])+(ls?'<div class="links">'+ls+"</div>":"")+"</article>";
 }).join("");
 
-var NX=[["CM Rendering","https://cmrendering.com.au/"],["Greenacre Auto Electrical","https://www.greenacreautoelectrical.com.au/"],["Get Found on Maps","https://getfoundonmaps.com.au/"],["Central Grounds Espresso Bar","https://centralgroundsespressobar.com.au/"]];
-$("#nx").innerHTML="<li class='meta'>Delivered projects</li>"+NX.map(function(n){return "<li>"+ext(n[1],n[0])+"</li>"}).join("");
+var NX=[["CM Rendering","A modern rendering and painting service website, focusing on high-quality rendering solutions.","https://cmrendering.com.au/","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=60"],["Greenacre Auto Electrical","Professional auto electrical service website offering repair, maintenance and installations for vehicles.","https://www.greenacreautoelectrical.com.au/","https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=60"],["Get Found on Maps","A modern React site for a digital agency with smooth animations and a custom hero banner.","https://getfoundonmaps.com.au/","images/get_found_on_maps.png"],["Central Grounds Espresso Bar","React site with clean UI and performance optimizations delivering a modern web experience.","https://centralgroundsespressobar.com.au/","images/central_grounds.jpg"]];
+$("#nx").innerHTML=NX.map(function(n){return '<article class="card nxc"><a class="nxi" href="'+n[2]+'" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="'+n[3]+'" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'"></a><div><h4>'+esc(n[0])+'</h4><p>'+esc(n[1])+'</p>'+ext(n[2],"View project")+"</div></article>"}).join("");
 
-var SV=[["Earth Systems and Environment","Q1, Springer Nature"],["Array","Q1, Elsevier"],["Big Data","Q1, SAGE"],["PLOS Climate","Q1, PLOS"],["Discover Computing","Q2, Springer"],["Discover Informatics","Q2, Springer"]];
-$("#svc").innerHTML="<li class='meta'>Peer reviewer, journals</li>"+SV.map(function(s){return "<li>"+s[0]+' <span class="meta">('+s[1]+")</span></li>"}).join("")+"<li class='meta' style='margin-top:12px'>Reviewer, conference</li><li>NAACL</li>";
+var SV=["Earth Systems and Environment (Q1, Springer Nature)","Array (Q1, Elsevier)","Big Data (Q1, SAGE)","PLOS Climate (Q1, PLOS)","Discover Computing (Q2, Springer)","Discover Informatics (Q2, Springer)"];
+$("#svc").innerHTML=SV.map(function(s){return "<li>"+esc(s)+"</li>"}).join("");
 
-var SK=[["AI and machine learning","Generative AI, diffusion models, attention mechanisms, model compression"],["Deep learning and foundation models","Deep learning, CNN architectures, Transformers, foundation models"],["Vision, language and geospatial","Computer vision, NLP, geospatial AI, spatiotemporal modeling"],["Programming languages","Python, C, SQL"],["Frameworks and libraries","PyTorch, TensorFlow, Hugging Face, Scikit-learn, OpenCV"],["Research tools and infrastructure","Git, Linux, Docker, PyTorch Lightning, Weights & Biases, LaTeX"]];
-$("#skills").innerHTML=SK.map(function(s){return "<div><dt>"+esc(s[0])+"</dt><dd>"+esc(s[1])+"</dd></div>"}).join("");
+var SK=[["i-ai","AI and machine learning",["Predictive modeling","Ensemble learning","Statistical analysis","Generative AI","Diffusion models","Attention mechanisms","Model compression"]],
+["i-layers","Deep learning",["Deep learning","CNN architectures","CNNs","LSTMs","Transformers"]],
+["i-globe","Multimodal and foundation models",["Foundation models","Multimodal fusion","Vision models"]],
+["i-loop","Continual learning and world models",["Continual learning","World models","Catastrophic forgetting mitigation"]],
+["i-eye","Vision, language and Earth observation",["Computer vision","NLP","Remote sensing AI","Geospatial AI","Spatiotemporal modeling","Optical imagery","SAR","DEM"]],
+["i-code","Programming and frameworks",["Python","C","SQL","PyTorch","TensorFlow","Hugging Face","Scikit-learn","OpenCV","Geospatial libraries"]],
+["i-tool","Research tools",["Git","Linux","Docker","PyTorch Lightning","Weights & Biases","LaTeX"]]];
+$("#skills-list").innerHTML=SK.map(function(s){return '<div class="card"><h4><svg class="i"><use href="#'+s[0]+'"/></svg>'+esc(s[1])+"</h4>"+tags(s[2])+"</div>"}).join("");
 
 var C=[["Machine Learning Specialization, DeepLearning.AI and Stanford (Jun 2024)","https://www.coursera.org/account/accomplishments/specialization/Q5J9GS86EEHF"],["Analyzing Video with OpenCV and NumPy, Coursera","https://www.coursera.org/account/accomplishments/records/6WWCABR3WLES"],["AI Job Simulation, Cognizant","https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/5N2ygyhzMWjKQmgCK_Cognizant_9buw4EvDpEv2jj2X4_1715894438643_completion_certificate.pdf"],["GenAI Basics: How LLMs Work, Coursera","https://www.coursera.org/account/accomplishments/records/AQE4NPDX2SPH"],["Generative AI for Everyone, DeepLearning.AI","https://www.coursera.org/account/accomplishments/records/AJB9WPV2UGKB"],["Introduction to Data Science, Cognizant","https://www.credly.com/badges/be366890-912b-4c07-8348-9f9499fe7db5/linked_in_profile"],["Introduction to Generative AI, Google Cloud","https://www.coursera.org/account/accomplishments/records/EYU9A9ZWREV9"],["Problem Solving (Basic), HackerRank","https://www.hackerrank.com/certificates/eb7d502b607e"]];
-$("#certs").innerHTML=C.map(function(c){return "<li>"+ext(c[1],esc(c[0]))+"</li>"}).join("");
+var CI=["DeepLearning.AI and Stanford · Jun 2024","Coursera","Cognizant","Coursera","DeepLearning.AI","Cognizant","Google Cloud","HackerRank"];
+var CT=["Machine Learning Specialization","Analyzing Video with OpenCV and NumPy","AI Job Simulation","GenAI Basics: How LLMs Work","Generative AI for Everyone","Introduction to Data Science","Introduction to Generative AI","Problem Solving (Basic)"];
+$("#certs").innerHTML=C.map(function(c,i){return '<a href="'+c[1]+'" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-cert"/></svg><span>'+esc(CT[i])+"<small>"+esc(CI[i])+"</small></span></a>"}).join("");
 
 var root=document.documentElement;
 try{var t=localStorage.getItem("theme");if(t)root.dataset.theme=t}catch(e){}
 $("#theme").addEventListener("click",function(){
  var dark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
  root.dataset.theme=dark?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}});
-// Mobile navigation: use delegated click handling and close after selection.
 var nav=$("#nav"),mb=$("#menu");
-function closeM(){
- nav.classList.remove("open");
- mb.setAttribute("aria-expanded","false");
- mb.setAttribute("aria-label","Open navigation menu");
-}
-function toggleM(){
- var isOpen=nav.classList.toggle("open");
- mb.setAttribute("aria-expanded",String(isOpen));
- mb.setAttribute("aria-label",isOpen?"Close navigation menu":"Open navigation menu");
-}
-mb.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();toggleM();});
-nav.addEventListener("click",function(e){if(e.target.closest("a"))closeM();});
-document.addEventListener("click",function(e){
- if(nav.classList.contains("open")&&!nav.contains(e.target)&&!mb.contains(e.target))closeM();
-});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")closeM();});
-window.addEventListener("resize",function(){if(window.innerWidth>860)closeM();});
+function closeM(){nav.classList.remove("open");mb.setAttribute("aria-expanded","false")}
+mb.addEventListener("click",function(){var o=nav.classList.toggle("open");mb.setAttribute("aria-expanded",o)});
+nav.addEventListener("click",function(e){if(e.target.tagName==="A")closeM()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeM()});
 var links=[].slice.call(nav.querySelectorAll("a"));
 if("IntersectionObserver" in window){
  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){
-  links.forEach(function(a){a.classList.toggle("act",a.getAttribute("href")==="#"+en.target.id||(en.target.id==="interests"&&a.getAttribute("href")==="#about"))})}})},{rootMargin:"-40% 0px -55% 0px"});
+  var id=en.target.id==="interests"?"about":en.target.id;
+  links.forEach(function(a){a.classList.toggle("act",a.getAttribute("href")==="#"+id)})}})},{rootMargin:"-40% 0px -55% 0px"});
  document.querySelectorAll("main section[id]").forEach(function(s){io.observe(s)});}
-// Back-to-top: update visibility on scroll and use a mobile-friendly smooth scroll.
 var topBtn=$("#top");
-function updateTopButton(){topBtn.hidden=(window.pageYOffset||document.documentElement.scrollTop||0)<400;}
-window.addEventListener("scroll",updateTopButton,{passive:true});
-window.addEventListener("pageshow",updateTopButton);
-topBtn.addEventListener("click",function(e){
- e.preventDefault();
- window.scrollTo({top:0,behavior:"smooth"});
-});
-updateTopButton();
+addEventListener("scroll",function(){topBtn.hidden=scrollY<600},{passive:true});
+topBtn.addEventListener("click",function(){scrollTo({top:0})});
 })();
 </script>
 </body>
